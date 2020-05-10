@@ -32,7 +32,7 @@ const sortHospitals = (hospitals) => {  //시 또는 도 별 정렬
 const HospitalContainer = () => {
   const [hospitals, setHospitals] = useState([]);
   useEffect(() => {
-    const hospitalDataUrl = `/B551182/pubReliefHospService/getpubReliefHospList?serviceKey=${hospitalDataOptions.serviceKey}&pageNo=${hospitalDataOptions.pageNo}&numOfRows=${hospitalDataOptions.numOfRows}&spclAdmTyCd=${hospitalDataOptions.spclAdmTyCd}&`;
+    const hospitalDataUrl = `http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList?serviceKey=${hospitalDataOptions.serviceKey}&pageNo=${hospitalDataOptions.pageNo}&numOfRows=${hospitalDataOptions.numOfRows}&spclAdmTyCd=${hospitalDataOptions.spclAdmTyCd}&`;
     axios
       .get(hospitalDataUrl)
       .then((response) => {
