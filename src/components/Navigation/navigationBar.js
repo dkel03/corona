@@ -30,13 +30,13 @@ const NavigationBar = () => {
           <MenuButton color="black" onClick={() => setToggle(!toggle)}>
             <MenuIcon/>
           </MenuButton>
-          <Title>코로나 걱정끝!</Title>
+          <Title>Corona Care</Title>
         </Toolbar>
       </AppBar>
       <SwipeableDrawer anchor="left" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
         <List>
           <ListItem>
-            <NavTitle>COVID-19</NavTitle>
+            <NavTitle>Corona Care</NavTitle>
           </ListItem>
         </List>
         <Divider />
@@ -70,7 +70,7 @@ const Root = styled.div`
   flexGrow: 1
 `
 const Title = styled.h1`
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 20px;
   font-weight: 300;
 `
@@ -78,13 +78,14 @@ const MenuButton = styled(IconButton)`
   margin-right: 10px;
 `
 const NavTitle = styled.h1`
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 200;
 `
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #2f2f2f;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 300;
   width: 130px;
   padding: 8px;
 `
