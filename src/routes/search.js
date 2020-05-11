@@ -20,7 +20,8 @@ const SearchContainer = styled.div`
   border-radius: 5px;
   background-color: white;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
+  max-width: 1000px;
 ` 
 
 export default Search;

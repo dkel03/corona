@@ -4,13 +4,20 @@ import styled from "styled-components";
 function About() {
   return (
     <AboutContainer>
-      <AboutTitle>About</AboutTitle>
+      <AboutTitle>Data 출처</AboutTitle>
       <AboutText>
-        코로나가 불안할때<br />
-        접촉자에 해당하는지를 판별하고, 선별진료소를 찾아보세요<br />
+        - 건강보험심사평가원 코로나-19 병원 정보 API<br /> 
+        (www.data.go.kr/data/15043078/openapi.do)
       </AboutText>
+      <AboutTitle>개발 스택</AboutTitle>
       <AboutText>
-        Contact: dkel03@korea.ac.kr
+        - BackEnd: NodeJs + Express (Heroku)<br /> 
+        - FrontEnd: React + Material UI (Github Page)
+      </AboutText>
+      <AboutTitle>Info</AboutTitle>
+      <AboutText>
+        - Developer: Jay_Kim <br />
+        - Contact: dkel03@korea.ac.kr
       </AboutText>
     </AboutContainer>
   );
@@ -24,11 +31,11 @@ const AboutContainer = styled.div`
   background-color: white;
   margin: 0 auto;
   font-size: 13px;
-  margin-top: 10px;
+  margin-top: 30px;
+  max-width: 800px;
 `
-const AboutTitle = styled.h1`
-  padding: 10px;
-  font-weight: 400;
+const AboutTitle = styled.h2`
+  font-weight: 350;
 `
 const AboutText = styled.p`
   padding: 10px;

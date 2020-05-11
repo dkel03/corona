@@ -10,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Divider from '@material-ui/core/Divider';
+import { makeStyles } from '@material-ui/core/styles';
 
 // material-ui core/List
 import List from '@material-ui/core/List';
@@ -21,22 +22,30 @@ import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import InfoIcon from '@material-ui/icons/Info';
 
+const useStyles = makeStyles({
+  paper: {
+    background: 'white'
+  }
+});
+
 const NavigationBar = () => {
   const [toggle, setToggle] = useState(false);
+  const styles = useStyles();
+
   return (
     <Root>
-      <AppBar position="static" color="white">
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <MenuButton color="black" onClick={() => setToggle(!toggle)}>
+          <MenuButton color="inherit" onClick={() => setToggle(!toggle)}>
             <MenuIcon/>
           </MenuButton>
-          <Title>Corona Care</Title>
+          <Title>코로나 케어</Title>
         </Toolbar>
       </AppBar>
-      <SwipeableDrawer anchor="left" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
+      <SwipeableDrawer classes={{ paper: styles.paper }} anchor="left" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
         <List>
           <ListItem>
-            <NavTitle>Corona Care</NavTitle>
+            <NavTitle>I HATE COVID-19</NavTitle>
           </ListItem>
         </List>
         <Divider />
@@ -45,20 +54,20 @@ const NavigationBar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <StyledLink to="/">홈</StyledLink>
+            <StyledLink to="/">Home</StyledLink>
           </ListItem>
           <ListItem button onClick={() => setToggle(!toggle)} >
             <ListItemIcon>
               <SearchIcon />
             </ListItemIcon>
-            <StyledLink to="/search">선별진료소 검색</StyledLink>
+            <StyledLink to="/search">Search</StyledLink>
           </ListItem>
           <Divider />
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <StyledLink to="/about">정보</StyledLink>
+            <StyledLink to="/about">Info</StyledLink>
           </ListItem>
         </List>
       </SwipeableDrawer>
@@ -78,14 +87,15 @@ const MenuButton = styled(IconButton)`
   margin-right: 10px;
 `
 const NavTitle = styled.h1`
-  font-size: 18px;
-  font-weight: 200;
+  margin-left: 12px;
+  font-size: 20px;
+  font-weight: 300;
 `
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #2f2f2f;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   width: 130px;
   padding: 8px;
 `

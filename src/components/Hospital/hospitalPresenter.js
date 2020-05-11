@@ -8,7 +8,7 @@ import Hospital from "./hospital";
 
 const HospitalPresenter = (props) => {
   const { hospitals, loading } = props;
-  const name = hooks.useInput("서울", (value) => value.length <= 10);
+  const name = hooks.useInput("", (value) => value.length <= 10);
   return (
     <Fragment>
       <SearchCard>
@@ -56,6 +56,7 @@ const Card = styled.div`
 const SearchCard = styled(Card)`
   display: flex;
   flex-direction: column;
+  background-color: white;
   align-items: center;
   border: 1px solid rgba(50, 50, 93, 0.25);
   max-width: 800px;
@@ -73,9 +74,7 @@ const HospitalListCard = styled(Card)`
   justify-content: space-around;
   box-shadow: none;
 `
-const SearchTitle = styled.h1`
-
-`
+const SearchTitle = styled.h1``
 
 const SearchHospitalInput = styled.input.attrs({
   placeholder: "검색어를 입력하세요...",

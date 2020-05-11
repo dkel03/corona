@@ -27,6 +27,7 @@ const HospitalCard = styled.div`
   border-radius: 5px;
   min-width: 300px;
 `
+
 const ItemBox = styled.div`
   margin: 8px;
   padding: 5px;
