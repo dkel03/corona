@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import SimpleCard from "../Components/Home/simpleCard";
+import HospitalContainer from "../Components/Hospital/hospitalContainer"
 
-const Home = () => {
+const Search = () => {
   return (
-    <HomeContainer>
-      <SimpleCard />
-    </HomeContainer>
-  )
+    <SearchContainer>
+      <HospitalContainer />
+    </SearchContainer>
+  );
 }
 
-const HomeContainer = styled.div`
+const SearchContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +21,6 @@ const HomeContainer = styled.div`
   background-color: white;
   margin: 0 auto;
   margin-top: 10px;
-`
+` 
 
-export default Home;
+export default Search;

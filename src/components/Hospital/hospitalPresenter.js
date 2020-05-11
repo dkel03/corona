@@ -9,7 +9,6 @@ import Hospital from "./hospital";
 const HospitalPresenter = (props) => {
   const { hospitals, loading } = props;
   const name = hooks.useInput("서울", (value) => value.length <= 10);
-
   return (
     <Fragment>
       <Card>
