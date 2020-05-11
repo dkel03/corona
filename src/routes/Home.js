@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HospitalContainer from "../components/Hospital/hospitalContainer"
+import HospitalContainer from "../Components/Hospital/hospitalContainer"
 
 const Home = () => {
   return (

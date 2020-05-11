@@ -4,8 +4,13 @@ import styled from "styled-components";
 function About() {
   return (
     <AboutContainer>
+      <AboutTitle>About</AboutTitle>
       <AboutText>
-        “코로나가 불안할때”
+        코로나가 불안할때<br />
+        접촉자에 해당하는지를 판별하고, 선별진료소를 찾아보세요<br />
+      </AboutText>
+      <AboutText>
+        Contact: dkel03@korea.ac.kr
       </AboutText>
     </AboutContainer>
   );
@@ -19,13 +24,17 @@ const AboutContainer = styled.div`
   background-color: white;
   margin: 0 auto;
   font-size: 13px;
-  height: 100px;
   margin-top: 10px;
-  font-weight: 300;
 `
-
-const AboutText = styled.span`
+const AboutTitle = styled.h1`
+  padding: 10px;
+  font-weight: 400;
+`
+const AboutText = styled.p`
+  padding: 10px;
+  line-height: 30px;
   font-size: 15px;
+  font-weight: 300;
 `
 
 export default About;

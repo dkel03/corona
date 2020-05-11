@@ -1,16 +1,22 @@
 import React from "react";
+import { Fragment } from "react";
 import styled from "styled-components";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Loading = () => {
   return (
-    <LoadingItem>
-      Loading ...
-    </LoadingItem>);
+    <Fragment>
+      <CircularProgress />
+      <LoadingItem>
+        Loading ...
+      </LoadingItem>
+    </Fragment>
+  );
 }
 
 const LoadingItem = styled.div`
-  width: 80px;
-  height: 20px;
+  margin-left: 10px;
+  margin-top: 7px;
   color: #95a5a6;
 `
 
