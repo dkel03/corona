@@ -11,7 +11,6 @@ const Loading = () => {
 const LoadingItem = styled.div`
   width: 80px;
   height: 20px;
-  padding: 10px;
   color: #95a5a6;
 `
 

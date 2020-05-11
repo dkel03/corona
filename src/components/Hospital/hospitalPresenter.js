@@ -28,42 +28,56 @@ const HospitalPresenter = (props) => {
       ) : (
         <Fragment />
       )}
-      {hospitals.map((item, index) => {
-        if (
-          name.value &&
-          item.spclAdmTyCd === 99 &&
-          (item.sidoNm === name.value ||
-            item.sgguNm.includes(name.value) ||
-            item.telno.includes(name.value + "-"))
-        ) {
-          return <Hospital key={index} {...item} />;
-        }
-        return;
-      })}
+      <HospitalListCard>
+        {hospitals.map((item, index) => {
+          if (
+            name.value &&
+            item.spclAdmTyCd === 99 &&
+            (item.sidoNm === name.value ||
+              item.sgguNm.includes(name.value) ||
+              item.telno.includes(name.value + "-"))
+          ) {
+            return <Hospital key={index} {...item} />;
+          }
+          return;
+        })}
+      </HospitalListCard>
     </Fragment>
   );
 };
 
 const Card = styled.div`
-  margin: 10px;
+  width: 100%;
+  margin: 20px;
   padding: 10px;
-  max-width: 300px;
-  border: 1px solid;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 `;
+
 const LoadingCard = styled(Card)`
   display: flex;
   justify-content: center;
-  border: none
+  box-shadow: none;
 `;
+const HospitalListCard = styled(Card)`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  box-shadow: none;
+`
 
 const SearchHospitalInput = styled.input.attrs({
-  placeholder: "검색어를 입력하세요",
+  placeholder: "검색어를 입력하세요...",
 })`
-  box-shadow: 0 0px 0px white;
-  width: 200px;
-  height: 30px;
+  min-width: 200px;
   margin: 10px;
+  padding: 10px;
   font-size: 20px;
+  border-radius:0px 0px;
+  -webkit-appearance:none;
+  border: 1px solid #adaeb9;
 `;
 
 const InputExplain = styled.p`

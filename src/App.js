@@ -1,18 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import HospitalContainer from './components/Hospital/hospitalContainer'
+import {HashRouter, Route} from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation"
+import Home from "./routes/Home";
+import About from "./routes/About";
+import "./App.css"
 
 function App() {
   return (
-    <Container>
-      <HospitalContainer />
-    </Container>
+    <HashRouter>
+      <Navigation />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
+    </HashRouter>
   );
 }
-
-const Container = styled.div`
-  margin: 0px;
-  padding 0px;
-`
 
 export default App;
