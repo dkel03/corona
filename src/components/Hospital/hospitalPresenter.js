@@ -1,10 +1,13 @@
 import React from "react";
 import { Fragment } from "react";
 import styled from "styled-components";
-import Hospital from "./hospital";
 import hooks from "../../hooks";
+// components
+import Loading from "../loading";
+import Hospital from "./hospital";
 
 const HospitalPresenter = (props) => {
+  const { hospitals, loading } = props;
   const name = hooks.useInput("서울", (value) => value.length <= 10);
 
   return (
@@ -18,10 +21,24 @@ const HospitalPresenter = (props) => {
           ex) '서울' 또는 '중구' 또는 '02'(전화번호 일부)
         </InputExplain>
       </Card>
-      {props.hospitals.map((item, index) => {
-        if(name.value && (item.sidoNm === name.value || item.sgguNm.includes(name.value) || item.telno.includes(name.value+'-'))) {
-          return <Hospital key={index} {...item} />
+      {loading ? (
+        <LoadingCard>
+          <Loading />
+        </LoadingCard>
+      ) : (
+        <Fragment />
+      )}
+      {hospitals.map((item, index) => {
+        if (
+          name.value &&
+          item.spclAdmTyCd === 99 &&
+          (item.sidoNm === name.value ||
+            item.sgguNm.includes(name.value) ||
+            item.telno.includes(name.value + "-"))
+        ) {
+          return <Hospital key={index} {...item} />;
         }
+        return;
       })}
     </Fragment>
   );
@@ -33,6 +50,12 @@ const Card = styled.div`
   max-width: 300px;
   border: 1px solid;
 `;
+const LoadingCard = styled(Card)`
+  display: flex;
+  justify-content: center;
+  border: none
+`;
+
 const SearchHospitalInput = styled.input.attrs({
   placeholder: "검색어를 입력하세요",
 })`
@@ -42,13 +65,6 @@ const SearchHospitalInput = styled.input.attrs({
   margin: 10px;
   font-size: 20px;
 `;
-const SearchButton = styled.button`
-  font-size: 15px;
-  display: inline-block;
-  width: 100px;
-  height: 30px;
-  border-radius: 0.35em;
-`
 
 const InputExplain = styled.p`
   font-size: 12px;
