@@ -7,15 +7,16 @@ const HomeCard = () => {
     <BrownCard>
       <BrownCardTitle>코로나 케어란?</BrownCardTitle>
       <BrownCardText>
-        이태원 클럽 등의 집단감염으로 인해,<br />
+        이태원 클럽 등의 <Impact>집단감염</Impact> 으로 인해,<br />
         산발적인 N차 감염의 가능성이 높아지고 있습니다.
         <br /><br />
         정부에서도 최선을 다하고 있으나,<br />
-        확진자와 접촉한 불특정 다수를 모두 관리하기엔<br />
+        확진자와 접촉한 <Impact>불특정 다수</Impact>를 모두 관리하기엔<br />
         벅찬 것이 사실입니다.
         <br /><br />
-        개인으로서의 대응에 관한 필수적인 정보,<br />
-        상황에 따른 적절한 대응방법을 알려드립니다.
+        따라서, <br />
+        코로나 감염 예방 및 종식을 위해서는,<br />
+        <Impact>개인들</Impact> 또한 대응에 관한 정보를 알아야 합니다.<br />
       </BrownCardText>
     </BrownCard>
   );
@@ -39,6 +40,10 @@ const BrownCardText = styled(Typography).attrs({
 })`
   padding: 10px;
   line-height: 25px;
+`
+const Impact = styled.span`
+  font-size: 20px;
+  color: #616161;
 `
 
 export default HomeCard;

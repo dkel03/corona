@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment } from "react";
 import styled from "styled-components";
 import hooks from "../../hooks";
+import { Typography } from "@material-ui/core";
 // components
 import Loading from "../loading";
 import Hospital from "./hospital";
@@ -12,13 +13,12 @@ const HospitalPresenter = (props) => {
   return (
     <Fragment>
       <SearchCard>
-        <SearchTitle>선별진료소 검색하기</SearchTitle>
         <SearchHospitalInput {...name} />
         <InputExplain>
-          시도 및 시군구, 전화번호를 통합하여 검색합니다.
+          시군구, 전화번호를 통합하여 검색합니다.
         </InputExplain>
         <InputExplain>
-          ex) '서울' 또는 '중구' 또는 '02'(전화번호 일부)
+          ex)'과천' 또는 '중구' 또는 '02'(전화번호 일부)
         </InputExplain>
       </SearchCard>
       {loading ? (
@@ -33,9 +33,8 @@ const HospitalPresenter = (props) => {
           if (
             name.value &&
             item.spclAdmTyCd === 99 &&
-            (item.sidoNm === name.value ||
-              item.sgguNm.includes(name.value) ||
-              item.telno.includes(name.value + "-"))
+            ((name.value.length >= 2 && item.sgguNm.includes(name.value)) || 
+            (name.value.length >= 2 && item.telno.includes(name.value + "-")))
           ) {
             return <Hospital key={index} {...item} />;
           }
@@ -46,27 +45,31 @@ const HospitalPresenter = (props) => {
   );
 };
 
-const Card = styled.div`
-  width: 100%;
+const SearchCard = styled.div`
   margin: 20px;
   padding: 10px;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-`;
-const SearchCard = styled(Card)`
   display: flex;
   flex-direction: column;
-  background-color: white;
   align-items: center;
-  border: 1px solid rgba(50, 50, 93, 0.25);
-  max-width: 800px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  background-color: #bcaaa4;
+  border-radius: 8px;
+  color: white;
+  min-width: 300px;
 `
-const LoadingCard = styled(Card)`
+const LoadingCard = styled.div`
+  margin: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   box-shadow: none;
 `;
-const HospitalListCard = styled(Card)`
+
+const HospitalListCard = styled.div`
+  margin: 20px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -74,12 +77,9 @@ const HospitalListCard = styled(Card)`
   justify-content: space-around;
   box-shadow: none;
 `
-const SearchTitle = styled.h1``
-
 const SearchHospitalInput = styled.input.attrs({
   placeholder: "검색어를 입력하세요...",
 })`
-  min-width: 300px;
   margin: 10px;
   padding: 10px;
   font-size: 20px;
@@ -88,8 +88,9 @@ const SearchHospitalInput = styled.input.attrs({
   border: 1px solid #adaeb9;
 `;
 
-const InputExplain = styled.p`
-  font-size: 12px;
+const InputExplain = styled(Typography).attrs({
+  variant: "body2"
+})`
   margin: 10px;
   align-item: center;
 `;

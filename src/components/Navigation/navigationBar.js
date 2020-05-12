@@ -19,6 +19,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 // material-ui icons
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 import SearchIcon from '@material-ui/icons/Search';
 import InfoIcon from '@material-ui/icons/Info';
 import { Typography } from '@material-ui/core';
@@ -56,6 +57,12 @@ const NavigationBar = () => {
               <HomeIcon />
             </ListItemIcon>
             <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
+          </ListItem>
+          <ListItem button onClick={() => setToggle(!toggle)}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <StyledLink to="/diagnose"><Typography varient="body1">자가진단</Typography></StyledLink>
           </ListItem>
           <ListItem button onClick={() => setToggle(!toggle)} >
             <ListItemIcon>

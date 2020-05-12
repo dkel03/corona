@@ -6,7 +6,7 @@ import { Typography } from "@material-ui/core";
 import HomeCard from "../Components/Home/homeCard";
 import SecondCard from "../Components/Home/secondCard";
 
-function Home() {
+function Diagnose() {
   const [cardIndex, setCardIndex] = useState(0);
   const prevCard = () => {
     if(cardIndex > 0) {
@@ -20,8 +20,8 @@ function Home() {
   }
   return (
     <Container>
-      <Title>코로나케어</Title>
-      <SubTitle>Corona Care</SubTitle>
+      <Title>자가진단</Title>
+      <SubTitle>Self Diagnose</SubTitle>
       {cardIndex ? (<SecondCard />) : (<HomeCard />)}
       <ButtonDiv>
         {cardIndex ? <Button onClick={() => prevCard()}  color="secondary">back</Button> : <div />}
@@ -33,7 +33,7 @@ function Home() {
 
 const Container = styled.div`
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   padding: 20px;
   border-radius: 5px;
   background-color: white;
@@ -64,4 +64,4 @@ const ButtonDiv = styled.div`
   margin-top: 30px;
 `;
 
-export default Home;
+export default Diagnose;

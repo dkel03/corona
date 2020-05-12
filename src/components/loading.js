@@ -2,13 +2,14 @@ import React from "react";
 import { Fragment } from "react";
 import styled from "styled-components";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { Typography } from "@material-ui/core";
 
 const Loading = () => {
   return (
     <Fragment>
       <CircularProgress color="secondary"/>
       <LoadingItem>
-        Loading ...
+        <Typography>Loading ...</Typography>
       </LoadingItem>
     </Fragment>
   );
