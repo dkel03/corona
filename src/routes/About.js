@@ -10,7 +10,7 @@ function About() {
       <BrownCard>
         <BrownCardTitle>Data 출처 & License</BrownCardTitle>
         <BrownCardText>
-          <Impact>- </Impact>건강보험심사평가원 코로나-19 병원 정보 API<br /> 
+          <Impact>- </Impact>건강보험심사평가원 코로나-19 병원 정보<br /> 
           <Impact>- </Impact>배민 주아체
         </BrownCardText>
         <BrownCardTitle>개발 스택</BrownCardTitle>
@@ -20,7 +20,7 @@ function About() {
         </BrownCardText>
         <BrownCardTitle>Info</BrownCardTitle>
         <BrownCardText>
-          <Impact>- </Impact> Jay_Kim <br />
+          <Impact>- </Impact> 김장영 (Jay Kim) <br />
           <Impact>- </Impact> dkel03@korea.ac.kr <br />
           <Impact>- </Impact> facebook.com/jangyoung0108
         </BrownCardText>

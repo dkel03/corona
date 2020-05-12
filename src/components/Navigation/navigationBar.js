@@ -56,7 +56,7 @@ const NavigationBar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
+            <StyledLink to="/"><Typography varient="body1">코로나 케어란</Typography></StyledLink>
           </ListItem>
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
