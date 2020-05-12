@@ -7,7 +7,6 @@ import styled from "styled-components";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,9 +17,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 // material-ui icons
+import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import InfoIcon from '@material-ui/icons/Info';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   paper: {
@@ -39,13 +40,13 @@ const NavigationBar = () => {
           <MenuButton color="inherit" onClick={() => setToggle(!toggle)}>
             <MenuIcon/>
           </MenuButton>
-          <Title>코로나 케어</Title>
+          <Title variant="h5">코로나케어</Title>
         </Toolbar>
       </AppBar>
       <SwipeableDrawer classes={{ paper: styles.paper }} anchor="left" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
         <List>
           <ListItem>
-            <NavTitle>I HATE COVID-19</NavTitle>
+            <NavTitle variant="h6">I HATE COVID-19 </NavTitle>
           </ListItem>
         </List>
         <Divider />
@@ -54,20 +55,20 @@ const NavigationBar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
           </ListItem>
           <ListItem button onClick={() => setToggle(!toggle)} >
             <ListItemIcon>
               <SearchIcon />
             </ListItemIcon>
-            <StyledLink to="/search">Search</StyledLink>
+            <StyledLink to="/search"><Typography varient="body1">선별진료소 검색</Typography></StyledLink>
           </ListItem>
           <Divider />
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <StyledLink to="/about">Info</StyledLink>
+            <StyledLink to="/about"><Typography varient="body1">정보</Typography></StyledLink>
           </ListItem>
         </List>
       </SwipeableDrawer>
@@ -78,18 +79,14 @@ const NavigationBar = () => {
 const Root = styled.div`
   flexGrow: 1
 `
-const Title = styled.h1`
-  margin-left: 10px;
-  font-size: 20px;
-  font-weight: 300;
+const Title = styled(Typography)`
+  margin-top: 1px;
 `
 const MenuButton = styled(IconButton)`
   margin-right: 10px;
 `
-const NavTitle = styled.h1`
+const NavTitle = styled(Typography)`
   margin-left: 12px;
-  font-size: 20px;
-  font-weight: 300;
 `
 const StyledLink = styled(Link)`
   text-decoration: none;

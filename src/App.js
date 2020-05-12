@@ -8,6 +8,9 @@ import "./App.css"
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'BMJUA',
+  },
   palette: {
     primary: {
       light: '#ffc1e3',
