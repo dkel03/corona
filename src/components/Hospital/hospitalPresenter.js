@@ -26,13 +26,15 @@ const HospitalPresenter = (props) => {
         <InputExplain>
           ex)'과천' 또는 '중구' 또는 '02'(전화번호 일부)
         </InputExplain>
-        <FormControlLabel
-          control={
-            <Checkbox color="primary" name="checkedA" checked={checked} onChange={(event) => handleChange(event)} />
-          }
-          label="보건소를 제외할까요?"
-        />
-        <InputExplain>(보건소는 유료검사가 불가능합니다.)</InputExplain>
+        <BogunsoCard>
+          <FormControlLabel
+            control={
+              <Checkbox color="primary" name="checkedA" checked={checked} onChange={(event) => handleChange(event)} />
+            }
+            label="보건소를 제외할까요?"
+          />
+          <InputExplain><Impact>(보건소는 유료검사가 불가능합니다.)</Impact></InputExplain>
+        </BogunsoCard>
       </SearchCard>
       {loading ? (
         <LoadingCard>
@@ -59,7 +61,6 @@ const HospitalPresenter = (props) => {
 };
 
 const SearchCard = styled.div`
-  margin: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@ const SearchHospitalInput = styled.input.attrs({
   margin: 10px;
   padding: 10px;
   font-size: 20px;
-  border-radius:0px 0px;
+  border-radius: 8px;
   -webkit-appearance:none;
   border: 1px solid #adaeb9;
 `;
@@ -107,5 +108,15 @@ const InputExplain = styled(Typography).attrs({
   margin: 5px;
   align-item: center;
 `;
+const Impact = styled.span`
+  color: #616161;
+`
+
+const BogunsoCard = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+`
 
 export default HospitalPresenter;

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Typography } from "@material-ui/core";
+import {Typography} from '@material-ui/core';
 
-function Diagnose() {
+const SafeHospital = () => {
   return (
     <Container>
-      <Title>자가진단</Title>
-      <SubTitle>Self Diagnose</SubTitle>
+      <Title>안심병원 검색</Title>
+      <SubTitle>Safe Hospital Searching</SubTitle>
       준비중...
     </Container>
   );
@@ -22,7 +22,7 @@ const Container = styled.div`
   font-size: 13px;
   margin-top: 20px;
   max-width: 1000px;
-`;
+` 
 const Title = styled(Typography).attrs({
   variant: "h3",
   color: "secondary"
@@ -39,4 +39,5 @@ const SubTitle = styled(Typography).attrs({
   margin-left: 2px;
 `
 
-export default Diagnose;
+
+export default SafeHospital;

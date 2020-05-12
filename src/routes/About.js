@@ -8,10 +8,11 @@ function About() {
       <Title>정보</Title>
       <SubTitle>About & Info</SubTitle>
       <BrownCard>
-        <BrownCardTitle>Data 출처 & License</BrownCardTitle>
+        <BrownCardTitle>정보 출처</BrownCardTitle>
         <BrownCardText>
-          <Impact>- </Impact>건강보험심사평가원 코로나-19 병원 정보<br /> 
-          <Impact>- </Impact>배민 주아체
+          <Impact>- </Impact>건강보험심사평가원 코로나-19 병원 정보 api<br /> 
+          <Impact>- </Impact>코로나바이러스감염증-19 정부 홈페이지<br />
+          <Impact>- </Impact>코로나19지침 검색 어플리케이션<br />
         </BrownCardText>
         <BrownCardTitle>개발 스택</BrownCardTitle>
         <BrownCardText>
@@ -22,7 +23,12 @@ function About() {
         <BrownCardText>
           <Impact>- </Impact> 김장영 (Jay Kim) <br />
           <Impact>- </Impact> dkel03@korea.ac.kr <br />
-          <Impact>- </Impact> facebook.com/jangyoung0108
+          <Impact>- </Impact> facebook.com/jangyoung0108<br />
+        </BrownCardText>
+        <BrownCardText>
+          <br />
+          <Impact>부정확한 정보에 대한 피드백 부탁드립니다!</Impact><br />
+          <Impact>또한 코로나의 빠른 종식을 기원합니다...</Impact>
         </BrownCardText>
       </BrownCard>
     </AboutContainer>

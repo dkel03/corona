@@ -2,26 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const SecondCard = () => {
+const FourthCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
-        이태원 클럽 등의 <Impact>집단감염</Impact> 으로 인해,<br />
-        산발적인 N차 감염의 가능성이 높아지고 있죠...
-        <br /><br />
-        정부에서도 최선을 다하고 있으나,<br />
-        <Impact>불특정 다수</Impact>를 모두 관리하기엔<br />
-        벅찬 것이 사실인 듯 해요.
-        <br /><br />
+        <Impact>"접촉자"</Impact>에 대한 사례 정의는 다음과 같아요.
+        <br /><Halfbr /><Halfbr />
         <QACard>
-          Q. 접촉하진 않았는데 검사를 받을수 있을까요?<Halfbr />
-          A. 공식적인 <ImpactPink>접촉자</ImpactPink>로 분류가 되지 않으면 보건소 외의 선별진료소에서 <ImpactPink>유료검사</ImpactPink>를 받아야합니다.<br />
-          <Halfbr />
-          (이태원, 논현동 방문자는 예외)
+          <Impact>1. </Impact>확진환자 유증상기에 2m 이내 접촉한 사람<br />
+          <Impact>2. </Impact>확진환자가 폐쇄 공간에서 마스크를 쓰지 않고 기침을 했을 당시 같이 있던 사람
         </QACard>
-        <br />
+        <Halfbr /><Halfbr />
+        지자체는 역학조사를 실시하여 접촉자를<br />
+        특정한 뒤, <Impact>자가격리 대상자</Impact>로 분류합니다.<br />
+        어기면 벌금내야 하는, 강력한 조치죠...
+        <br /><br />
+        언론에 보도되는 곳들에 내가 다녀왔는데, <br />
+        나에게 연락이 한통도 오지 않았다면? <br />
+        나는 <Impact>접촉자</Impact>가 아닌걸까요?
+        <br /><br />
         <Right>
-          <BrownCardTitle>이런 것 궁금하지 않아요? 👉</BrownCardTitle>
+          <BrownCardTitle>그렇지 않아요!!! <span role="img">👉</span></BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -35,7 +36,6 @@ const BrownCard = styled.div`
   background-color: #bcaaa4;
   border-radius: 8px;
   color: white;
-  max-height: 450px;
 `
 const BrownCardTitle = styled(Typography).attrs({
   variant: "h5",
@@ -57,6 +57,8 @@ const QACard = styled.div`
   background-color: white;
   border-radius: 8px;
   color: black;
+  line-height: 30px;
+  max-width: 500px;
 `
 const Impact = styled.span`
   font-size: 20px;
@@ -75,4 +77,4 @@ const Right = styled.div`
   justify-content: flex-end;
 `
 
-export default SecondCard;
+export default FourthCard;

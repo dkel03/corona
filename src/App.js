@@ -4,6 +4,7 @@ import NavigationBar from "./Components/Navigation/navigationBar";
 import Home from "./routes/home";
 import Diagnose from "./routes/diagnose";
 import Search from "./routes/search";
+import SafeHospital from "./routes/safeHospital"
 import About from "./routes/about";
 import "./App.css"
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" exact={true} component={Home} />
         <Route path="/diagnose" component={Diagnose} />
         <Route path="/search" component={Search} />
+        <Route path="/safehospital" component={SafeHospital} />
         <Route path="/about" component={About} />
       </HashRouter>
     </MuiThemeProvider>

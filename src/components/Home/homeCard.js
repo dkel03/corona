@@ -5,19 +5,21 @@ import { Typography } from "@material-ui/core";
 const HomeCard = () => {
   return (
     <BrownCard>
-      <BrownCardTitle>코로나 케어란?</BrownCardTitle>
+      <BrownCardTitle>"나는 검사를 받아야 하는가?"</BrownCardTitle>
+      <BrownCardTitle>"나는 자가격리를 해야 하는가?"</BrownCardTitle>
       <BrownCardText>
-        이태원 클럽 등의 <Impact>집단감염</Impact> 으로 인해,<br />
-        산발적인 N차 감염의 가능성이 높아지고 있습니다.
+        매일매일 폰이 울립니다.<br />
+        <Impact>... </Impact>를 방문한 사람은 외출을 자제하라네요.
         <br /><br />
-        정부에서도 최선을 다하고 있으나,<br />
-        <Impact>불특정 다수</Impact>를 모두 관리하기엔<br />
-        벅찬 것이 사실입니다.
+        잠잠해 진것 같았던 코로나가 다시 무서워지고<br />
+        <Impact>나도</Impact> 혹시 감염된 것은 아닌가 걱정됩니다.
         <br /><br />
-        따라서, <br />
-        코로나 감염 예방 및 종식을 위해서는,<br />
-        <Impact>개인들</Impact> 또한 대응에 관한 정보를 알아야 합니다.<br />
+        1339에 전화하기 전에 먼저,<br />
+        우리 <ImpactLarge>코로나케어</ ImpactLarge> 해요
       </BrownCardText>
+      <Right>
+        <BrownCardTitle>좀만 더 읽어주실래요? <span role="img">👉</span></BrownCardTitle>
+      </Right>
     </BrownCard>
   );
 }
@@ -29,9 +31,10 @@ const BrownCard = styled.div`
   background-color: #bcaaa4;
   border-radius: 8px;
   color: white;
+  max-height: 450px;
 `
 const BrownCardTitle = styled(Typography).attrs({
-  variant: "h4",
+  variant: "h5",
 })`
   padding: 10px;
 `
@@ -44,6 +47,15 @@ const BrownCardText = styled(Typography).attrs({
 const Impact = styled.span`
   font-size: 20px;
   color: #616161;
+`
+const ImpactLarge = styled.span`
+  font-size: 23px;
+  color: #616161;
+`
+const Right = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 `
 
 export default HomeCard;

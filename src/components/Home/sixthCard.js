@@ -2,26 +2,32 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const SecondCard = () => {
+const SixthCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
-        이태원 클럽 등의 <Impact>집단감염</Impact> 으로 인해,<br />
-        산발적인 N차 감염의 가능성이 높아지고 있죠...
-        <br /><br />
-        정부에서도 최선을 다하고 있으나,<br />
-        <Impact>불특정 다수</Impact>를 모두 관리하기엔<br />
-        벅찬 것이 사실인 듯 해요.
-        <br /><br />
+        접촉자로 분류<Impact>된다면</Impact><br />
         <QACard>
-          Q. 접촉하진 않았는데 검사를 받을수 있을까요?<Halfbr />
-          A. 공식적인 <ImpactPink>접촉자</ImpactPink>로 분류가 되지 않으면 보건소 외의 선별진료소에서 <ImpactPink>유료검사</ImpactPink>를 받아야합니다.<br />
+          <Impact>- </Impact>확진자와 접촉한 날로부터 2주간<br />
           <Halfbr />
-          (이태원, 논현동 방문자는 예외)
+          <Indent /><Indent /><Impact>자가격리대상</Impact><br />
+          <Halfbr />
+          <Impact>- </Impact>증상 있을시 선별진료소에서 무료로 검사가능
         </QACard>
+        만약 접촉자로 분류<Impact>되지 않는다면</Impact><br />
+        <QACard>  
+        <Impact>- </Impact>능동감시대상자 혹은 외출자제 권고<br />
+        <Impact>- </Impact>이 경우, 만약 불안하면 본인부담 검사<br />
+        <Indent />(양성 판정 시, 환불가능)<br />
+        <Impact>- </Impact>검사를 받고 싶다면 선별진료소를 찾되,<br />
+        <Impact>- </Impact>보건소가 아닌 선별진료소를 찾아야함<br />
+        <Indent />(보건소는 유료검사가 안됨)
+        </QACard>
+        ※ 최근 이태원, 논현동 방문자의 경우에는<br />
+        <Indent />예외입니다
         <br />
         <Right>
-          <BrownCardTitle>이런 것 궁금하지 않아요? 👉</BrownCardTitle>
+          <BrownCardTitle>어느정도 감이 잡히시나요? <span role="img">👉</span></BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -35,7 +41,6 @@ const BrownCard = styled.div`
   background-color: #bcaaa4;
   border-radius: 8px;
   color: white;
-  max-height: 450px;
 `
 const BrownCardTitle = styled(Typography).attrs({
   variant: "h5",
@@ -57,6 +62,7 @@ const QACard = styled.div`
   background-color: white;
   border-radius: 8px;
   color: black;
+  max-width: 500px;
 `
 const Impact = styled.span`
   font-size: 20px;
@@ -74,5 +80,8 @@ const Right = styled.div`
   flex-direction: row;
   justify-content: flex-end;
 `
+const Indent = styled.span`
+  margin-left: 10px;
+`
 
-export default SecondCard;
+export default SixthCard;

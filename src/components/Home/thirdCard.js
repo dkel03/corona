@@ -2,26 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const SecondCard = () => {
+const ThirdCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
-        이태원 클럽 등의 <Impact>집단감염</Impact> 으로 인해,<br />
-        산발적인 N차 감염의 가능성이 높아지고 있죠...
-        <br /><br />
-        정부에서도 최선을 다하고 있으나,<br />
-        <Impact>불특정 다수</Impact>를 모두 관리하기엔<br />
-        벅찬 것이 사실인 듯 해요.
-        <br /><br />
-        <QACard>
-          Q. 접촉하진 않았는데 검사를 받을수 있을까요?<Halfbr />
-          A. 공식적인 <ImpactPink>접촉자</ImpactPink>로 분류가 되지 않으면 보건소 외의 선별진료소에서 <ImpactPink>유료검사</ImpactPink>를 받아야합니다.<br />
-          <Halfbr />
-          (이태원, 논현동 방문자는 예외)
-        </QACard>
-        <br />
+        우선 <Impact>정부</Impact>는 크게 4가지의 분류를 하고 있어요.
+        <br /><Halfbr /><Halfbr />
+        <QACard>검사에서 양성판정을 받은 <ImpactPink>확진환자</ImpactPink></QACard>
+        <QACard>의심되나, 아직 확진되지 않은 <ImpactPink>의사환자</ImpactPink></QACard>
+        <QACard>확진자와 접촉했다고 판단되는 <ImpactPink>접촉자</ImpactPink></QACard>
+        <QACard>보건소에서 2주간 확인하는 <ImpactPink>능동감시대상자</ImpactPink></QACard>
+        <Halfbr /><Halfbr />
+        이 중, 코로나케어가 집중하는 것은<br />
+        <Impact>"접촉자"</Impact> 에요.<br />
+        집단감염을 통해 우리 모두가 접촉자일 <br />
+        가능성이 생겼거든요...<br /><br />
         <Right>
-          <BrownCardTitle>이런 것 궁금하지 않아요? 👉</BrownCardTitle>
+          <BrownCardTitle>접촉자에 대해 알아보아요! 👉</BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -35,7 +32,6 @@ const BrownCard = styled.div`
   background-color: #bcaaa4;
   border-radius: 8px;
   color: white;
-  max-height: 450px;
 `
 const BrownCardTitle = styled(Typography).attrs({
   variant: "h5",
@@ -57,6 +53,7 @@ const QACard = styled.div`
   background-color: white;
   border-radius: 8px;
   color: black;
+  max-width: 500px;
 `
 const Impact = styled.span`
   font-size: 20px;
@@ -75,4 +72,4 @@ const Right = styled.div`
   justify-content: flex-end;
 `
 
-export default SecondCard;
+export default ThirdCard;
