@@ -24,6 +24,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import SearchIcon from '@material-ui/icons/Search';
 import InfoIcon from '@material-ui/icons/Info';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import AnnouncementIcon from '@material-ui/icons/Announcement';
 
 const useStyles = makeStyles({
   paper: {
@@ -58,7 +59,14 @@ const NavigationBar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <StyledLink to="/"><Typography varient="body1">코로나 케어란</Typography></StyledLink>
+            <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
+          </ListItem>
+
+          <ListItem button onClick={() => setToggle(!toggle)}>
+            <ListItemIcon>
+              <AnnouncementIcon />
+            </ListItemIcon>
+            <StyledLink to="/coronacare"><Typography varient="body1">코로나 케어란?</Typography></StyledLink>
           </ListItem>
                    
           <ListItem button onClick={() => setToggle(!toggle)}>

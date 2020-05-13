@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const SixthCard = () => {
+const SeventhCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
-        접촉자로 분류<Impact>된다면</Impact><br />
+        접촉자로 분류 <Impact>된다면</Impact><br />
         <QACard>
           <Impact>- </Impact>확진자와 접촉한 날로부터 2주간<br />
           <Halfbr />
@@ -14,7 +14,7 @@ const SixthCard = () => {
           <Halfbr />
           <Impact>- </Impact>증상 있을시 선별진료소에서 무료로 검사가능
         </QACard>
-        만약 접촉자로 분류<Impact>되지 않는다면</Impact><br />
+        만약 접촉자로 분류 <Impact>되지 않는다면</Impact><br />
         <QACard>  
         <Impact>- </Impact>능동감시대상자 혹은 외출자제 권고<br />
         <Impact>- </Impact>이 경우, 만약 불안하면 본인부담 검사<br />
@@ -27,7 +27,7 @@ const SixthCard = () => {
         <Indent />예외입니다
         <br />
         <Right>
-          <BrownCardTitle>어느정도 감이 잡히시나요? <span role="img">👉</span></BrownCardTitle>
+          <BrownCardTitle>어느정도 감이 잡히시나요?</BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -68,10 +68,6 @@ const Impact = styled.span`
   font-size: 20px;
   color: #616161;
 `
-const ImpactPink = styled.span`
-  font-size: 20px;
-  color: #f48fb1;
-`
 const Halfbr = styled.div`
   height: 7px;
 `
@@ -84,4 +80,4 @@ const Indent = styled.span`
   margin-left: 10px;
 `
 
-export default SixthCard;
+export default SeventhCard;

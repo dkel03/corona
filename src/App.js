@@ -1,11 +1,16 @@
 import React from "react";
 import {HashRouter, Route} from "react-router-dom";
 import NavigationBar from "./Components/Navigation/navigationBar";
-import Home from "./routes/home";
-import Diagnose from "./routes/diagnose";
-import Search from "./routes/search";
-import SafeHospital from "./routes/safeHospital"
-import About from "./routes/about";
+
+// Routes
+import Home from "./Routes/home";
+import Coronacare from "./Routes/coronacare";
+import Diagnose from "./Routes/diagnose";
+import Search from "./Routes/search";
+import SafeHospital from "./Routes/safeHospital"
+import About from "./Routes/about";
+
+// Styles
 import "./App.css"
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -14,7 +19,8 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <HashRouter>
         <NavigationBar />
-        <Route path="/" exact={true} component={Home} />
+        <Route path="/" exact={true} component={Home}  />
+        <Route path="/coronacare" component={Coronacare} />
         <Route path="/diagnose" component={Diagnose} />
         <Route path="/search" component={Search} />
         <Route path="/safehospital" component={SafeHospital} />

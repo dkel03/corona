@@ -2,23 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const ThirdCard = () => {
+const FifthCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
-        우선 <Impact>정부</Impact>는 크게 4가지의 분류를 하고 있어요.
+        <Impact>"접촉자"</Impact>에 대한 사례 정의는 다음과 같아요.
         <br /><Halfbr /><Halfbr />
-        <QACard>검사에서 양성판정을 받은 <ImpactPink>확진환자</ImpactPink></QACard>
-        <QACard>의심되나, 아직 확진되지 않은 <ImpactPink>의사환자</ImpactPink></QACard>
-        <QACard>확진자와 접촉했다고 판단되는 <ImpactPink>접촉자</ImpactPink></QACard>
-        <QACard>보건소에서 2주간 확인하는 <ImpactPink>능동감시대상자</ImpactPink></QACard>
+        <QACard>
+          <Impact>1. </Impact>확진환자 유증상기에 2m 이내 접촉한 사람<br />
+          <Impact>2. </Impact>확진환자가 폐쇄 공간에서 마스크를 쓰지 않고 기침을 했을 당시 같이 있던 사람
+        </QACard>
         <Halfbr /><Halfbr />
-        이 중, 코로나케어가 집중하는 것은<br />
-        <Impact>"접촉자"</Impact> 에요.<br />
-        집단감염을 통해 우리 모두가 접촉자일 <br />
-        가능성이 생겼거든요...<br /><br />
+        지자체는 역학조사를 실시하여 접촉자를<br />
+        특정한 뒤, <Impact>자가격리 대상자</Impact>로 분류합니다.<br />
+        어기면 벌금내야 하는, 강력한 조치죠...
+        <br /><br />
+        언론에 보도되는 곳들에 내가 다녀왔는데, <br />
+        나에게 연락이 한통도 오지 않았다면? <br />
+        나는 <Impact>접촉자</Impact>가 아닌걸까요?
+        <br /><br />
         <Right>
-          <BrownCardTitle>접촉자에 대해 알아보아요! 👉</BrownCardTitle>
+          <BrownCardTitle>그렇지 않아요!!!</BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -53,15 +57,12 @@ const QACard = styled.div`
   background-color: white;
   border-radius: 8px;
   color: black;
+  line-height: 30px;
   max-width: 500px;
 `
 const Impact = styled.span`
   font-size: 20px;
   color: #616161;
-`
-const ImpactPink = styled.span`
-  font-size: 20px;
-  color: #f48fb1;
 `
 const Halfbr = styled.div`
   height: 7px;
@@ -72,4 +73,4 @@ const Right = styled.div`
   justify-content: flex-end;
 `
 
-export default ThirdCard;
+export default FifthCard;

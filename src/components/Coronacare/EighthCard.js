@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
-const SeventhCard = () => {
+const EighthCard = () => {
   return (
     <BrownCard>
       <BrownCardText>
@@ -31,7 +31,7 @@ const SeventhCard = () => {
           <Indent />거주지의 <Impact>안심병원</Impact>을 검색해 볼 수 있어요!<br /><Halfbr />
         </QACard>
         <Right>
-          <BrownCardTitle>자가진단부터 할까요? <span role="img">👉</span></BrownCardTitle>
+          <BrownCardTitle>자가진단부터 할까요?</BrownCardTitle>
         </Right>
       </BrownCardText>
     </BrownCard>
@@ -86,10 +86,6 @@ const Impact = styled.span`
   font-size: 20px;
   color: #616161;
 `
-const ImpactPink = styled.span`
-  font-size: 20px;
-  color: #f48fb1;
-`
 const ImpactLarge = styled.span`
   font-size: 23px;
   color: #616161;
@@ -106,4 +102,4 @@ const Indent = styled.span`
   margin-left: 10px;
 `
 
-export default SeventhCard;
+export default EighthCard;
