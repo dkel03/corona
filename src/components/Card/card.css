@@ -6,6 +6,29 @@
   border-radius: 8px;
   color: white;
   width: 335px;
+  height: 457px;
+}
+
+.homeBrownCard {
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  background-color: #bcaaa4;
+  border-radius: 8px;
+  color: white;
+  width: 335px;
+  height: 382px;
+}
+
+.aboutBrownCard {
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  background-color: #bcaaa4;
+  border-radius: 8px;
+  color: white;
+  width: 335px;
+  height: 420px;
 }
 
 .brownCardTextBox {
@@ -15,6 +38,7 @@
 }
 
 .whiteCard {
+  width: 300px;
   margin-top: 8px;
   margin-bottom: 8px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
@@ -29,4 +53,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+.indent {
+  padding: 9px;
 }

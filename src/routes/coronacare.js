@@ -34,7 +34,7 @@ function Coronacare() {
     }
   }
   return (
-    <div className="container">
+    <div className="containerCard">
       {!cardIndex ? (<>
           <PageTitle title="코로나케어란?"></PageTitle>
           <PageSubtitle subtitle="평범한 대학생이 음성판정을 받기 까지"></PageSubtitle>

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Halfbr = () => {
+const Quarterbr = () => {
   return <StyledSpace />
 }
 
 const StyledSpace = styled.div`
-  height: 18px;
+  height: 7px;
 `
 
-export default Halfbr;
+export default Quarterbr;

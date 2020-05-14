@@ -24,7 +24,9 @@ const Hospital = (props) => {
       <div className="itemDiv">
         <Typography variant="body1">{telno}</Typography>
       </div>
-      <Button className="mapButton" onClick={() => alert("준비중입니다...")}><span className="white">지도보기</span></Button>
+      <div className="rightAlignDiv">
+        <Button variant="outlined" className="mapButton" onClick={() => alert("준비중입니다...")}><span className="white">지도보기</span></Button>
+      </div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const CardTitle = (props) => {
 const StyledTitle = styled(Typography).attrs({
   variant: "h5",
 })`
-  padding: 10px;
+  padding: 5px;
 `
 
 export default CardTitle;
