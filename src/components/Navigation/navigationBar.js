@@ -24,7 +24,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import SearchIcon from '@material-ui/icons/Search';
 import InfoIcon from '@material-ui/icons/Info';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-import AnnouncementIcon from '@material-ui/icons/Announcement';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 
 const useStyles = makeStyles({
   paper: {
@@ -51,20 +51,18 @@ const NavigationBar = () => {
           <ListItem>
             <NavTitle variant="h6">I HATE COVID-19 </NavTitle>
           </ListItem>
-        </List>
-        <Divider />
-
-        <List>
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
           </ListItem>
-
+        </List>
+        <Divider />
+        <List>
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
-              <AnnouncementIcon />
+              <LiveHelpIcon />
             </ListItemIcon>
             <StyledLink to="/coronacare"><Typography varient="body1">코로나 케어란?</Typography></StyledLink>
           </ListItem>
@@ -82,14 +80,14 @@ const NavigationBar = () => {
             <ListItemIcon>
               <SearchIcon />
             </ListItemIcon>
-            <StyledLink to="/search"><Typography varient="body1">선별진료소 검색</Typography></StyledLink>
+            <StyledLink to="/hospitalsearch"><Typography varient="body1">선별진료소 검색</Typography></StyledLink>
           </ListItem>
 
           <ListItem button onClick={() => setToggle(!toggle)}>
             <ListItemIcon>
               <LocalHospitalIcon />
             </ListItemIcon>
-            <StyledLink to="/safehospital"><Typography varient="body1">안심병원 검색</Typography></StyledLink>
+            <StyledLink to="/safehospitalsearch"><Typography varient="body1">안심병원 검색</Typography></StyledLink>
           </ListItem>
 
           <Divider />

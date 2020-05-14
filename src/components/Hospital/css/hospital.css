@@ -1,0 +1,46 @@
+.hospitalCard {
+  margin: 10px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  background-color: #bcaaa4;
+  border-radius: 8px;
+  color: white;
+}
+
+.safehospitalCard {
+  margin: 10px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  background-color: #efdcd5;
+  border-radius: 8px;
+  color: white;
+}
+
+.itemDiv {
+  display: flex;
+  margin: 8px;
+  padding: 10px;
+  min-width: 200px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: #8c7b75;
+}
+
+.sigunguDiv {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.mapButton {
+  margin-left: 10px;
+}
+
+.white {
+  color: white;
+}
+.darkBrown {
+  color: #8c7b75;
+}

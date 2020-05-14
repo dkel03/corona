@@ -1,28 +1,22 @@
 import React from "react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import hooks from "../../hooks";
 
 import { Typography } from "@material-ui/core";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from "@material-ui/core/Checkbox";
 
 // styles
 import "./css/presenter.css"
 
 // components
 import Loading from "../loading";
-import Hospital from "./Hospital";
+import SafeHospital from "./SafeHospital";
 
-const HospitalPresenter = (props) => {
+const SafeHospitalPresenter = (props) => {
   const { hospitals, loading } = props;
-  const [checked, setChecked] = useState(false);
   const name = hooks.useInput("", (value) => value.length <= 10);
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   return (
     <Fragment>
-      <div className="cardContainer">
+      <div className="safeCardContainer">
         <div className="searchCard">
           <div className="inputDiv">
             <input className="searchHospitalInput" placeholder="검색어를 입력하세요..." {...name} />
@@ -32,14 +26,12 @@ const HospitalPresenter = (props) => {
             <br />
             <Typography variant="body1">ex)'과천' 또는 '중구' 또는 '02'(지역번호)</Typography>
           </div>
-          <div className="bogunsoDiv">
-            <FormControlLabel
-              control={
-                <Checkbox color="primary" name="checkedA" checked={checked} onChange={(event) => handleChange(event)} />
-              }
-              label="보건소를 제외할까요?"
-            />
-            <Typography variant="body1"><span className="white">(보건소는 유료검사가 불가능합니다.)</span></Typography>
+          <div className="safeHospitalDiv">
+            <Typography variant="h6" > Q. 안심병원이란?</Typography>
+            <br />
+            <Typography variant="body2">- 국가에서 선정한 "코로나 걱정없는 병원"</Typography>
+            <br />
+            <Typography variant="body2">- 진료가 필요할 땐 꼭 안심병원을 찾으세요!</Typography>
           </div>
         </div>
       </div>
@@ -54,11 +46,11 @@ const HospitalPresenter = (props) => {
         {hospitals.map((item, index) => {
           if (
             (name.value &&
-            item.spclAdmTyCd === 99) && (checked ? (!item.yadmNm.includes("보건소")):(true) ) &&
+            item.spclAdmTyCd === "A0") &&
             ((name.value.length >= 2 && item.sgguNm.includes(name.value)) || 
             (name.value.length >= 2 && item.telno.includes(name.value + "-")))
           ) {
-            return <Hospital key={index} {...item} />;
+            return <SafeHospital key={index} {...item} />;
           }
           return;
         })}
@@ -67,4 +59,4 @@ const HospitalPresenter = (props) => {
   );
 };
 
-export default HospitalPresenter;
+export default SafeHospitalPresenter;

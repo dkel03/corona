@@ -7,11 +7,11 @@ import Button from "@material-ui/core/Button";
 // Styles
 import "./css/hospital.css";
 
-const Hospital = (props) => {
+const SafeHospital = (props) => {
   const { sgguNm, sidoNm, yadmNm, telno } = props;
 
   return (
-    <div className="hospitalCard">
+    <div className="safehospitalCard">
       <div className="itemDiv">
         <Typography variant="h5">{sidoNm}</Typography>
         <div className="sigunguDiv">
@@ -24,9 +24,9 @@ const Hospital = (props) => {
       <div className="itemDiv">
         <Typography variant="body1">{telno}</Typography>
       </div>
-      <Button className="mapButton" onClick={() => alert("준비중입니다...")}><span className="white">지도보기</span></Button>
+      <Button className="mapButton" onClick={() => alert("준비중입니다...")}><span className="darkBrown">지도보기</span></Button>
     </div>
   )
 }
 
-export default Hospital;
+export default SafeHospital;

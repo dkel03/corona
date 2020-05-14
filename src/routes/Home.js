@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components"
-;// Page 관련
+
+// Page 관련
 import "../Components/Page/page.css";
 import PageTitle from "../Components/Page/PageTitle";
 import PageSubtitle from "../Components/Page/PageSubtitle";
@@ -21,16 +21,11 @@ function Coronacare() {
       <div className="menuCard">
         <Menu to="coronacare" name="코로나케어란?" icon="1"/>
         <Menu to="diagnose" name="자가진단" icon="2"/>
-        <Menu to="search" name="선별진료소 검색" icon = "3"/>
-        <Menu to="safehospital" name="안심병원 검색" icon = "4"/>
+        <Menu to="hospitalsearch" name="선별진료소 검색" icon = "3"/>
+        <Menu to="safehospitalsearch" name="안심병원 검색" icon = "4"/>
       </div>
     </div>
   );
 }
-
-const Title = styled.div`
-  width: 100%;
-  align-items: center;
-`
 
 export default Coronacare;

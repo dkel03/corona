@@ -1,14 +1,14 @@
 import React from "react";
 import { Fragment, useState, useEffect } from "react";
 import axios from 'axios';
-import HospitalPresenter from "./HospitalPresenter";
+import SafeHospitalPresenter from "./SafeHospitalPresenter";
 
-const HospitalContainer = () => {
+const SafeHospitalContainer = () => {
   const [hospitals, setHospitals] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://corona-back.herokuapp.com/api/")
+    axios.get("https://corona-back.herokuapp.com/api/safehospital")
       .then(res => {
         setHospitals(res.data);
         setLoading(false);
@@ -18,9 +18,9 @@ const HospitalContainer = () => {
 
   return (
     <Fragment>
-      <HospitalPresenter loading={loading} hospitals={hospitals}/>
+      <SafeHospitalPresenter loading={loading} hospitals={hospitals}/>
     </Fragment>
   );
 };
 
-export default HospitalContainer;
+export default SafeHospitalContainer;

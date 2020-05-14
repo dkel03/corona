@@ -6,8 +6,8 @@ import NavigationBar from "./Components/Navigation/navigationBar";
 import Home from "./Routes/home";
 import Coronacare from "./Routes/coronacare";
 import Diagnose from "./Routes/diagnose";
-import Search from "./Routes/search";
-import SafeHospital from "./Routes/safeHospital"
+import HospitalSearch from "./Routes/hospitalsearch";
+import SafeHospitalSearch from "./Routes/safehospitalsearch"
 import About from "./Routes/about";
 
 // Styles
@@ -22,8 +22,8 @@ function App() {
         <Route path="/" exact={true} component={Home}  />
         <Route path="/coronacare" component={Coronacare} />
         <Route path="/diagnose" component={Diagnose} />
-        <Route path="/search" component={Search} />
-        <Route path="/safehospital" component={SafeHospital} />
+        <Route path="/hospitalsearch" component={HospitalSearch} />
+        <Route path="/safehospitalsearch" component={SafeHospitalSearch} />
         <Route path="/about" component={About} />
       </HashRouter>
     </MuiThemeProvider>
@@ -44,7 +44,7 @@ const theme = createMuiTheme({
     secondary: {
       light: '#efdcd5',
       main: '#bcaaa4',
-      dark: '##8c7b75',
+      dark: '#8c7b75',
       contrastText: '#fafafa',
     },
   },

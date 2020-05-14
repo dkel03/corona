@@ -62,7 +62,7 @@ function Coronacare() {
       }
       <div className="buttonDiv">
         {cardIndex ? <Button onClick={() => prevCard()}  color="secondary">back</Button> : <Button />}
-        {cardIndex ? <Button color="secondary">{cardIndex+1}/{maxCardIndex+1}</Button> : <Button />}
+        <Button color="secondary">{cardIndex+1}/{maxCardIndex+1}</Button>
         {cardIndex === maxCardIndex ? <Button color="secondary"><StyledLink to="/diagnose">자가진단</StyledLink></Button> : <Button onClick={() => nextCard()} color="secondary" >next</Button>}
       </div>
     </div>

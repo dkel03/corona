@@ -1,0 +1,108 @@
+.cardContainer {
+  margin-top: 10px;
+  padding: 15px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 30px;
+  background-color: #bcaaa4;
+}
+
+.safeCardContainer {
+  margin-top: 10px;
+  padding: 15px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 30px;
+  background-color: #efdcd5;
+}
+
+.searchCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  background-color: white;
+  color:#8c7b75;
+  min-width: 300px;
+}
+
+.loadingDiv {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.hospitalListDiv {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  box-shadow: none;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.searchHospitalInput {
+  z-index: 2;
+  width: 90%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  -webkit-appearance:none;
+  border: 2px solid #8c7b75;
+}
+
+.explainDiv {
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  line-height: 5px;
+}
+
+.bogunsoDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #bcaaa4;
+  border-radius: 8px;
+  padding: 5px;
+  width: 90%;
+  margin: 10px;
+  color: white;
+}
+
+.safeHospitalDiv {
+  width: 90%;
+  margin: 10px;
+  padding: 13px;
+  border-radius: 8px;
+  line-height: 5px;
+  background-color: #bcaaa4;
+  color: white;
+}
+
+.space {
+  padding: 10px;
+}
+
+.impact {
+  color: #616161;
+}
