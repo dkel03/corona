@@ -6,7 +6,6 @@ import HospitalContainer from "../Components/Hospital/HospitalContainer"
 import "../Components/Page/page.css";
 import PageTitle from "../Components/Page/PageTitle";
 import PageSubtitle from "../Components/Page/PageSubtitle";
-
 import SearchIcon from '@material-ui/icons/Search';
 
 const HospitalSearch = () => {

@@ -1,0 +1,85 @@
+.questionCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardDiv {
+  background-color: #efdcd5;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 8px;
+  width: 330px;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+.questionTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.questionTitleDiv {
+  border-bottom: 2px solid #bcaaa4;
+  padding: 5px;
+  margin-top: 5px;
+}
+.questionTitleDivAnswer {
+  border-bottom: 2px solid grey;
+  padding: 5px;
+  margin-top: 5px;
+  color: grey;
+}
+
+.questionTextDiv{
+  margin-top: 25px;
+  color:#8c7b75;
+}
+.questionTextDivAnswer {
+  margin-top: 25px;
+  color:grey;
+}
+
+.contentDiv {
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  color: #bcaaa4
+}
+.cardDiv .contentDiv a {
+  text-decoration: none;
+}
+
+.buttonDiv {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.buttonDivAnswer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rightAlignDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.answerTextColor {
+  color: black;
+}
+.answerTextGrey {
+  color: grey;
+}

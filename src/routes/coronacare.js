@@ -71,5 +71,6 @@ function Coronacare() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  color: #bcaaa4;
 `
 export default Coronacare;
