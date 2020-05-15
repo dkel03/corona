@@ -35,32 +35,32 @@ const StyledLink = styled(Link)`
   margin: 10px;
 `
 const Content = styled.div`
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
 `
 
 const StyledLiveHelpIcon = styled(LiveHelpOutlinedIcon)`
   margin-top: 5px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #bcaaa4;
 `
 const StyledAssignmentIcon = styled(AssignmentOutlinedIcon)`
   margin-top: 5px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #bcaaa4;
 `
 const StyledLocalHospitalIcon = styled(LocalHospitalOutlinedIcon)`
   margin-top: 5px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #bcaaa4;
 `
 const StyledSearchIcon = styled(SearchOutlinedIcon)`
   margin-top: 5px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #bcaaa4;
 `
 

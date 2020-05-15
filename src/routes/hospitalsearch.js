@@ -27,8 +27,8 @@ const HospitalSearch = () => {
 }
 
 const StyledSearchIcon = styled(SearchIcon)`
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   color: #bcaaa4;
 `
 

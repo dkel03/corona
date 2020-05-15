@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import "../Components/Coronacare/coronacare.css"
 import FirstCard from "../Components/Coronacare/FirstCard";
 import SecondCard from "../Components/Coronacare/SecondCard";
-import ThirdCard from "../Components/Coronacare/ThirdCard";
+// import ThirdCard from "../Components/Coronacare/ThirdCard";
 import FourthCard from "../Components/Coronacare/FourthCard";
 import FifthCard from "../Components/Coronacare/FifthCard";
 import SixthCard from "../Components/Coronacare/SixthCard";
@@ -22,7 +22,7 @@ import PageSubtitle from "../Components/Page/PageSubtitle";
 
 function Coronacare() {
   const [cardIndex, setCardIndex] = useState(0);
-  const maxCardIndex = 7;
+  const maxCardIndex = 6;
   const prevCard = () => {
     if(cardIndex > 0) {
       setCardIndex(cardIndex-1)
@@ -44,15 +44,15 @@ function Coronacare() {
         (cardIndex === 1 ? 
           (<SecondCard />) : 
           (cardIndex === 2 ? 
-            (<ThirdCard />) : 
+            (<FourthCard />) : 
             (cardIndex === 3 ? 
-              (<FourthCard />) :
+              (<FifthCard />) :
               (cardIndex === 4 ? 
-                (<FifthCard />) :
+                (<SixthCard />) :
                 (cardIndex === 5 ? 
-                  (<SixthCard />) :
+                  (<SeventhCard />) :
                   (cardIndex === 6 ? 
-                    (<SeventhCard />) : (<EighthCard />)
+                    (<EighthCard />) : (<EighthCard />)
                   )
                 )
               )

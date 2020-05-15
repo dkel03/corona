@@ -19,7 +19,7 @@ const ThirdCard = () => {
         <CardText text="이런 상황에 어떻게 대응해야 할지 막막했어요." /><br />
         <Halfbr />
         <CardText text="정부에서 많은 노력을 하고 있지만" /><br />
-        <CardText text="저처럼 "/><CardImpact text="접촉자" /><CardText text="로 분류되지 않은 경우엔,"/><br />
+        <CardText text="저처럼 "/><CardImpact text="접촉자" /><CardText text="로 분류되지 않고 "/><CardImpact text="무증상" /><CardText text="인 경우,"/><br />
         <CardText text="그 불안함이란게 굉장히 막연하거든요.." /><br />
         <Quarterbr />
         <div className="whiteCard">

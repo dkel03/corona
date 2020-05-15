@@ -16,7 +16,7 @@ const SecondCard = () => {
         <CardText text="안일하게 이곳저곳 안심하고 돌아다닌 것이," /><br />
         <CardText text="저를 "/><CardImpact text="코로나 검사" /><CardText text="까지 하게 만들었어요."/><br />
         <Quarterbr />
-        <CardText text="막상 " /><CardImpact text="나의 일" /><CardText text="이 되니까," /><br />
+        <CardText text="막상 " /><CardImpact text="나의 일" /><CardText text="이 되니까, " /><CardImpact text="무증상" /><CardText text="이었지만"/><br />
         <CardText text="무섭기도 하고, 만났던 주위사람들한테 미안하고," /><br />
         <CardText text="무엇보다, 너무 " /><CardImpact text="막막하더라구요.." /><br />
         <Quarterbr />

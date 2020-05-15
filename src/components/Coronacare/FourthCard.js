@@ -6,7 +6,6 @@ import CardTitle from "../Card/CardTitle"
 import CardText from "../Card/CardText"
 import CardImpact from "../Card/CardImpact"
 import CardImpactPink from "../Card/CardImpactPink"
-import Halfbr from "../Card/Halfbr";
 import Quarterbr from "../Card/Quarterbr";
 
 
@@ -31,10 +30,10 @@ const FourthCard = () => {
         </div>
         <Quarterbr />
         <CardText text="이 중, 코로나케어가 집중하는 것은 " /><br />
-        <CardImpact text="접촉자 " /><CardText text="에요." /><br />
-        <CardText text="집단감염을 통해 우리 모두가 접촉자일 " /> <br />
-        <CardText text="가능성이 생겼거든요... " /><br />
-        <Halfbr />
+        <CardImpact text="접촉자" /><CardText text="와 그 " /><CardImpact text="주위 사람들" /><CardText text="이에요." /><Quarterbr />
+        <CardText text="집단감염을 통해 우리 모두가 접촉자 혹은" /> <br />
+        <CardText text="접촉자의 접촉자일 가능성이 높아졌거든요... " /><br />
+        <Quarterbr />
         <div className="rightAlignDiv">
           <CardTitle title="접촉자에 대해 알아봐요!"></CardTitle>
         </div>

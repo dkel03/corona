@@ -1,105 +1,42 @@
 import React from "react";
-import styled from "styled-components";
-import { Typography } from "@material-ui/core";
+
+import "../Card/card.css"
+import CardTitle from "../Card/CardTitle"
+import CardText from "../Card/CardText"
+import CardImpact from "../Card/CardImpact"
+import CardImpactPink from "../Card/CardImpactPink"
+import Quarterbr from "../Card/Quarterbr";
+
 
 const EighthCard = () => {
   return (
-    <BrownCard>
-      <BrownCardText>
-        <ImpactLarge>코로나케어</ImpactLarge> 에서는 다양한 기능을 제공해요<br />
-        <Halfbr /><Halfbr /><Halfbr />
-        <QACard>
-          <QACardTitle>
-            자가진단
-          </QACardTitle>
-          <Indent /><Impact>접촉자</Impact>인지를 손쉽게 진단해 볼 수 있어요!<br /><Halfbr />
-        </QACard>
-        <Halfbr />
-        <Halfbr />
-        <QACard>
-          <QACardTitle>선별진료소 검색</QACardTitle>
-          <Indent />거주지의 <Impact>선별진료소</Impact>를 검색해 볼수 있어요<br /><Halfbr />
-          <Indent />접촉자가 아니지만 불안한 경우를 위해,<br />
-          <Indent />보건소를 제외하고 검색하는 기능이 있어요!<br />
-        </QACard>
-        <Halfbr />
-        <Halfbr />
-        <QACard>
-          <QACardTitle>안심병원 검색</QACardTitle>
-          <Indent /><Impact>안심병원</Impact>은 국가에서 지정하여,<br />
-          <Indent />코로나로부터 안심할 수 있는 병원이에요.<br /><Halfbr />
-          <Indent />거주지의 <Impact>안심병원</Impact>을 검색해 볼 수 있어요!<br /><Halfbr />
-        </QACard>
-        <Right>
-          <BrownCardTitle>자가진단부터 할까요?</BrownCardTitle>
-        </Right>
-      </BrownCardText>
-    </BrownCard>
+    <div className="brownCard">
+      <div className="brownCardTextBox">
+        <Quarterbr />
+        <CardImpact text="코로나케어" /><CardText text="를 통해 전하고자 하는 핵심은," /><br />
+        <CardText text="연쇄작용을 조기에 차단하자는 것이에요." /><br />
+        <div className="whiteCard">
+          <CardText text="친구가 이태원 클럽을 다녀왔다. (친구는 접촉자)" />
+        </div>
+        <div className="whiteCard">
+          <CardText text="나는 그 친구를 만났다. " /><CardImpactPink text="접촉자의 접촉자" />
+        </div>
+        <div className="whiteCard">
+          <CardText text="만약 친구가 확진이라면? " /><CardImpactPink text="나도 접촉자!" />
+        </div>
+        <CardImpact text="접촉자의 접촉자" /><CardText text="인 경우," /><br />
+        <CardText text="현재로서는 보건소외의 선별진료소에서" /><br />
+        <CardText text="본인부담의 검사를 하는 수 밖에 없습니다..." /><br />
+        <Quarterbr />
+        <CardText text="때문에 " /><CardImpact text="접촉자" /><CardText text="이신 분들은, 증상관계 없이" /><br />
+        <CardImpact text="자가격리 " /><CardText text="및 " /><CardImpact text="외출자제" /><CardText text=" 철저히 지켜주시고," /><br />
+        <CardText text="증상이 있다면 바로! 검사를 받으셔야 해요!!!" /><br />
+        <div className="rightAlignDiv">
+          <CardTitle title="일단 자가진단부터 해요!"></CardTitle>
+        </div>
+      </div>
+    </div>
   );
 }
-
-const BrownCard = styled.div`
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  padding: 10px;
-  background-color: #bcaaa4;
-  border-radius: 8px;
-  color: white;
-`
-const BrownCardTitle = styled(Typography).attrs({
-  variant: "h5",
-})`
-  padding: 10px;
-`
-const BrownCardText = styled(Typography).attrs({
-  variant: "body1"
-})`
-  padding: 10px;
-  line-height: 25px;
-`
-const QACard = styled.div`
-  margin-top: 8px;
-  margin-bottom: 8px;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 6px -6px rgba(0, 0, 0, 0.025);
-  padding: 8px;
-  background-color: white;
-  border-radius: 8px;
-  color: black;
-  max-width: 500px;
-`
-const QACardTitle = styled.div`
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  width: 150px;
-  margin-left: 5px;
-  margin-top: -20px;
-  margin-bottom: 15px;
-  background-color: #f48fb1;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-`
-const Impact = styled.span`
-  font-size: 20px;
-  color: #616161;
-`
-const ImpactLarge = styled.span`
-  font-size: 23px;
-  color: #616161;
-`
-const Halfbr = styled.div`
-  height: 7px;
-`
-const Right = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-`
-const Indent = styled.span`
-  margin-left: 10px;
-`
 
 export default EighthCard;

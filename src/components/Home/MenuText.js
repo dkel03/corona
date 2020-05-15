@@ -7,7 +7,7 @@ const MenuText = (props) => { // 기본적으로 span임 !!
 }
 
 const StyledText = styled(Typography).attrs({
-  variant: "h6"
+  variant: "body1"
 })`
   color: #bcaaa4;
 `
