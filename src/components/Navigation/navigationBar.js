@@ -95,7 +95,7 @@ const NavigationBar = () => {
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <StyledLink to="/about"><Typography varient="body1">정보</Typography></StyledLink>
+            <StyledLink to="/about"><Typography varient="body1">About</Typography></StyledLink>
           </ListItem>
         </List>
       </SwipeableDrawer>

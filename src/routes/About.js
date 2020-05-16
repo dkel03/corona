@@ -3,7 +3,6 @@ import React from "react";
 // Page 관련
 import "../Components/Page/page.css";
 import PageTitle from "../Components/Page/PageTitle";
-import PageSubtitle from "../Components/Page/PageSubtitle";
 
 // Card 관련
 import "../Components/Card/card.css"
@@ -16,13 +15,14 @@ import Space from "../Components/Card/Space";
 function About() {
   return (
     <div className="containerCard">
-      <PageTitle title="정보" />
-      <PageSubtitle subtitle="About & Info" />
+      <PageTitle title="About" />
       <div className="aboutBrownCard">
-        <CardTitle title="정보 출처" />
+      <Quarterbr />
+        <CardTitle title="정보 출처 & API" />
         <div className="brownCardTextBox">
-          <CardImpact text="-" /><Space /><CardText text="건강보험심사평가원 코로나-19 병원 정보 api" /><br /> 
           <CardImpact text="-" /><Space /><CardText text="코로나바이러스감염증-19 정부 홈페이지" /><br />
+          <CardImpact text="-" /><Space /><CardText text="건강보험심사평가원 코로나-19 병원 정보 api" /><br />
+          <CardImpact text="-" /><Space /><CardText text="Kakao-Map api" /><br /> 
         </div>
         <CardTitle title="개발 스택" />
         <div className="brownCardTextBox">

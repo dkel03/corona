@@ -38,3 +38,14 @@
 .darkBrown {
   color: #8c7b75;
 }
+
+.dialogDiv {
+  width: 100%;
+  color: #8c7b75;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zidoupdate {
+  padding: 10px;
+}
