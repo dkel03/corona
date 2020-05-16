@@ -13,6 +13,7 @@ import KakaoMap from "../KakaoMap/KakaoMap"
 
 const Hospital = (props) => {
   const { sgguNm, sidoNm, yadmNm, telno } = props;
+  const telnumber = "tel:"+telno;
   const [open, setOpen] = useState(false);
   const keyword = `${sidoNm} ${sgguNm} ${yadmNm}`;
   return (
@@ -27,7 +28,7 @@ const Hospital = (props) => {
         <Typography variant="body1">{yadmNm}</Typography>
       </div>
       <div className="itemDiv">
-        <Typography variant="body1">{telno}</Typography>
+        <Typography variant="body1"><a href={telnumber}>{telno}</a></Typography>
       </div>
       <div className="rightAlignDiv">
         <Button variant="outlined" className="mapButton" onClick={() => setOpen(true)}><span className="white">지도보기</span></Button>
