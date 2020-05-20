@@ -16,7 +16,10 @@ const CardTitle = (props) => {
 }
 
 const StyledTypo = styled(Typography)`
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-bottom: 2px solid;
   display: inline;
 `
 

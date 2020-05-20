@@ -11,7 +11,7 @@ import Quarterbr from "../Card/Quarterbr";
 const SixthCard = () => {
   return (
     <div className="brownCard">
-      <div className="brownCardTextBox">
+      <div className="brownCardTextDiv">
         <Quarterbr />
         <CardImpact text="접촉자 " /><CardText text="이더라도, "/><br />
         <CardText text="역학조사를 통해 특정되지 않을 수도 있답니다.."/><br />

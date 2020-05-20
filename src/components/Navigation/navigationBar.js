@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import "./navigation.css"
+
 // material-ui core
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +18,7 @@ import { Typography } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
+import Quarterbr from "../Card/Quarterbr";
 
 // material-ui icons
 import MenuIcon from '@material-ui/icons/Menu';
@@ -28,7 +31,8 @@ import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 
 const useStyles = makeStyles({
   paper: {
-    background: 'white'
+    background: 'white',
+    color: "#232323"
   }
 });
 
@@ -38,66 +42,73 @@ const NavigationBar = () => {
 
   return (
     <Root>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="inherit">
         <Toolbar>
-          <MenuButton color="inherit" onClick={() => setToggle(!toggle)}>
-            <MenuIcon/>
-          </MenuButton>
-          <Title variant="h5">코로나케어</Title>
+          <div className="toolbarDiv">
+            <div className="toolbarTitleDiv">
+              <Title variant="h6">
+                <StyledLinkHome to="/">코로나케어</StyledLinkHome>
+              </Title>
+            </div>
+            <div className="toolbarButtonDiv">
+              <MenuButton size="small" color="inherit" onClick={() => setToggle(!toggle)}>
+                <MenuIcon/>
+              </MenuButton>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
-      <SwipeableDrawer classes={{ paper: styles.paper }} anchor="left" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
-        <List>
-          <ListItem>
-            <NavTitle variant="h6">I HATE COVID-19 </NavTitle>
-          </ListItem>
-          <ListItem button onClick={() => setToggle(!toggle)}>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <StyledLink to="/"><Typography varient="body1">홈</Typography></StyledLink>
-          </ListItem>
-        </List>
-        <Divider />
-        <List>
-          <ListItem button onClick={() => setToggle(!toggle)}>
-            <ListItemIcon>
-              <LiveHelpIcon />
-            </ListItemIcon>
-            <StyledLink to="/coronacare"><Typography varient="body1">코로나 케어란?</Typography></StyledLink>
-          </ListItem>
-                   
-          <ListItem button onClick={() => setToggle(!toggle)}>
-            <ListItemIcon>
-              <AssignmentIcon />
-            </ListItemIcon>
-            <StyledLink to="/diagnose"><Typography varient="body1">자가진단</Typography></StyledLink>
-          </ListItem>
-
+      <SwipeableDrawer classes={{ paper: styles.paper }} anchor="right" open={toggle} onClose={() => setToggle(!toggle)} onOpen={() => setToggle(!toggle)}>
+        <Typography>
+          <List>
+            <ListItem>
+              <NavTitle variant="h6">I HATE COVID-19 </NavTitle>
+            </ListItem>
+            <ListItem button onClick={() => setToggle(!toggle)}>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <StyledLink to="/">홈</StyledLink>
+            </ListItem>
+          </List>
           <Divider />
-
-          <ListItem button onClick={() => setToggle(!toggle)} >
-            <ListItemIcon>
-              <SearchIcon />
-            </ListItemIcon>
-            <StyledLink to="/hospitalsearch"><Typography varient="body1">선별진료소 검색</Typography></StyledLink>
-          </ListItem>
-
-          <ListItem button onClick={() => setToggle(!toggle)}>
-            <ListItemIcon>
-              <LocalHospitalIcon />
-            </ListItemIcon>
-            <StyledLink to="/safehospitalsearch"><Typography varient="body1">안심병원 검색</Typography></StyledLink>
-          </ListItem>
-
-          <Divider />
-          <ListItem button onClick={() => setToggle(!toggle)}>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <StyledLink to="/about"><Typography varient="body1">About</Typography></StyledLink>
-          </ListItem>
-        </List>
+          <List>
+            <ListItem button onClick={() => setToggle(!toggle)}>
+              <ListItemIcon>
+                <LiveHelpIcon />
+              </ListItemIcon>
+              <StyledLink to="/coronacare">코로나 케어란?</StyledLink>
+            </ListItem>
+            <ListItem button onClick={() => setToggle(!toggle)}>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <StyledLink to="/diagnose">자가진단</StyledLink>
+            </ListItem>
+            <Quarterbr />
+            <Divider />
+            <Quarterbr />
+            <ListItem button onClick={() => setToggle(!toggle)} >
+              <ListItemIcon>
+                <SearchIcon />
+              </ListItemIcon>
+              <StyledLink to="/hospitalsearch">선별진료소 검색</StyledLink>
+            </ListItem>
+            <ListItem button onClick={() => setToggle(!toggle)}>
+              <ListItemIcon>
+                <LocalHospitalIcon />
+              </ListItemIcon>
+              <StyledLink to="/safehospitalsearch">안심병원 검색</StyledLink>
+            </ListItem>
+            <Divider />
+            <ListItem button onClick={() => setToggle(!toggle)}>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <StyledLink to="/about">About</StyledLink>
+            </ListItem>
+          </List>
+        </Typography>
       </SwipeableDrawer>
     </Root>
   );
@@ -106,8 +117,9 @@ const NavigationBar = () => {
 const Root = styled.div`
   flexGrow: 1
 `
-const Title = styled(Typography)`
-  margin-top: 1px;
+const Title = styled(Typography).attrs({
+
+})`
 `
 const MenuButton = styled(IconButton)`
   margin-right: 10px;
@@ -117,11 +129,19 @@ const NavTitle = styled(Typography)`
 `
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #2f2f2f;
-  font-size: 15px;
-  font-weight: 400;
+  color: #232323;
+  font-size: 16px;
+  font-weight: 700;
   width: 130px;
-  padding: 8px;
+  padding: 5px;
+`
+const StyledLinkHome = styled(Link)`
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #232323;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: underline;
 `
 
 export default NavigationBar;

@@ -6,11 +6,12 @@ const PageTitle = (props) => { //나중에 prop types 적용하기! title 있을
   return <StyledTitle>{props.title}</StyledTitle>;
 }
 const StyledTitle = styled(Typography).attrs({
-  variant: "h4",
-  color: "secondary"
 })`
+  font-size: 26px;
+  font-weight: 900;
   margin-top: -10px;
   padding: 10px;
+  color: #232323
 `;
 
 export default PageTitle;

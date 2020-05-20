@@ -7,11 +7,10 @@ const CardImpact = (props) => { // 기본적으로 span임 !!
 }
 
 const StyledImpact = styled(Typography).attrs({
-  variant: "body1"
+  variant: "h6"
 })`
+  color: black;
   display: inline;
-  font-size: 20px;
-  color: #616161;
 `
 
 export default CardImpact;

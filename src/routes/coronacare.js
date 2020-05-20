@@ -17,8 +17,6 @@ import EighthCard from "../Components/Coronacare/EighthCard";
 
 // Page 관련
 import "../Components/Page/page.css";
-import PageTitle from "../Components/Page/PageTitle";
-import PageSubtitle from "../Components/Page/PageSubtitle";
 
 function Coronacare() {
   const [cardIndex, setCardIndex] = useState(0);
@@ -34,13 +32,9 @@ function Coronacare() {
     }
   }
   return (
-    <div className="containerCard">
-      {!cardIndex ? (<>
-          <PageTitle title="코로나케어란?"></PageTitle>
-          <PageSubtitle subtitle="평범한 대학생이 음성판정을 받기 까지"></PageSubtitle>
-        </>) : (<></>) }
+    <div className="container">
       {cardIndex === 0 ? 
-        (<FirstCard />) :
+        (<FirstCard setCardIndex={setCardIndex}/>) :
         (cardIndex === 1 ? 
           (<SecondCard />) : 
           (cardIndex === 2 ? 
@@ -61,9 +55,9 @@ function Coronacare() {
         ) 
       }
       <div className="buttonDiv">
-        {cardIndex ? <Button onClick={() => prevCard()}  color="secondary">back</Button> : <Button />}
-        <Button color="secondary">{cardIndex+1}/{maxCardIndex+1}</Button>
-        {cardIndex === maxCardIndex ? <Button color="secondary"><StyledLink to="/diagnose">자가진단</StyledLink></Button> : <Button onClick={() => nextCard()} color="secondary" >next</Button>}
+        {cardIndex && cardIndex !== 1 ? <Button onClick={() => prevCard()}>back</Button> : <Button />}
+        {cardIndex ? <Button>{cardIndex}/{maxCardIndex}</Button> : <Button />}
+        {cardIndex === maxCardIndex ? <Button><StyledLink to="/diagnose">자가진단</StyledLink></Button> : cardIndex ? <Button onClick={() => nextCard()}>next</Button> : <></>}
       </div>
     </div>
   );
@@ -71,6 +65,6 @@ function Coronacare() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #bcaaa4;
+  color: #232323;
 `
 export default Coronacare;

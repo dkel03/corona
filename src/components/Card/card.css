@@ -1,47 +1,36 @@
 .brownCard {
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
   0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  padding: 10px;
-  background-color: #bcaaa4;
+  background-color: white;
   border-radius: 8px;
-  color: white;
-  width: 335px;
-  height: 457px;
+  color: black;
+  width: 85%;
+  padding: 10px;
 }
 
-.homeBrownCard {
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  padding: 10px;
-  background-color: #bcaaa4;
-  border-radius: 8px;
-  color: white;
-  width: 335px;
-  height: 382px;
+@media all and (min-width:440px) {
+  .brownCard {
+    width: 400px;
+    padding: 10px;
+  }
 }
-
-.aboutBrownCard {
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  padding: 10px;
-  background-color: #bcaaa4;
-  border-radius: 8px;
-  color: white;
-  width: 335px;
+.brownCardTitleDiv {
+  border-bottom: 1.5px solid #232323;
+  padding: 5px;
+  margin-top: 5px;
+  color: #232323;
 }
-
-.brownCardTextBox {
-  margin-top: -15px;
-  padding: 10px;
-  line-height: 25px;
+.brownCardTextDiv {
+  margin: 5px;
+  color:black;
 }
 
 .whiteCard {
-  width: 300px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  width: auto;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
   0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  margin-bottom: 8px;
+  margin-top: 8px;
   padding: 8px;
   background-color: white;
   border-radius: 8px;
@@ -55,4 +44,9 @@
 }
 .indent {
   padding: 9px;
+}
+.freeCheckUpDiv{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }

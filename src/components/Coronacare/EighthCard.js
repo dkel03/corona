@@ -11,7 +11,7 @@ import Quarterbr from "../Card/Quarterbr";
 const EighthCard = () => {
   return (
     <div className="brownCard">
-      <div className="brownCardTextBox">
+      <div className="brownCardTextDiv">
         <Quarterbr />
         <CardImpact text="코로나케어" /><CardText text="를 통해 전하고자 하는 핵심은," /><br />
         <CardText text="연쇄작용을 조기에 차단하자는 것이에요." /><br />

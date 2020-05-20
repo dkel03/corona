@@ -12,16 +12,18 @@ import QuestionText from "../Components/QuestionText";
 import AnswerText from "../Components/AnswerText";
 import HospitalButton from "../Components/HospitalButton";
 import Quarterbr from "../Components/Quarterbr";
+import FreeCheckUp from "../Components/FreeCheckUp";
 
 const Seven = (props) => {
   const { setCardIndex } = props;
   return (
     <div className="cardDiv">
       <div className="contentDiv">
-        <div className="questionTitleDivAnswer">
+        <div className="questionTitleDiv">
           <AnswerTitle title="조사되지 않은 접촉자" />
         </div>
-        <div className="questionTextDivAnswer">
+        <div className="questionTextDiv">
+          <FreeCheckUp type="free" />
           <QuestionText text="역학조사에 포함되지 않은 접촉자입니다." />
           <br/>
           <div className="answerTextColor">
@@ -39,7 +41,7 @@ const Seven = (props) => {
         </div>
         <div className="buttonDivAnswer">
           <HospitalButton />
-          <Button size="medium" color="secondary" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
+          <Button size="medium" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
         </div>
       </div>
     </div>

@@ -20,8 +20,8 @@ const One = (props) => {
           <QuestionText text="증상이 있으신가요?" />
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(2)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(3)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(2)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(3)}>No</Button>
         </div>
       </div>
     </div>

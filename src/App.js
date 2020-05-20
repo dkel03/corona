@@ -31,21 +31,18 @@ function App() {
 }
 
 const theme = createMuiTheme({
+  shadows: ["none"],
   typography: {
-    fontFamily: 'BMJUA',
+    fontFamily: 'BBTreeGR',
   },
   palette: {
     primary: {
-      light: '#ffc1e3',
-      main: '#f48fb1',
-      dark: '#bf5f82',
-      contrastText: '#fafafa',
+      main: '#f8e6e6',
+      contrastText: '#232323',
     },
     secondary: {
-      light: '#efdcd5',
-      main: '#bcaaa4',
-      dark: '#8c7b75',
-      contrastText: '#fafafa',
+      main: '#625b5b',
+      contrastText: 'white',
     },
   },
 });

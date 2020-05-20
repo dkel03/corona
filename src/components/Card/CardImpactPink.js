@@ -7,11 +7,9 @@ const CardImpactPink = (props) => { // 기본적으로 span임 !!
 }
 
 const StyledImpact = styled(Typography).attrs({
-  variant: "body1"
+  variant: "h6"
 })`
   display: inline;
-  font-size: 20px;
-  color: #f48fb1;
 `
 
 export default CardImpactPink;

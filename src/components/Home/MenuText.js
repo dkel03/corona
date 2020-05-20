@@ -7,9 +7,10 @@ const MenuText = (props) => { // 기본적으로 span임 !!
 }
 
 const StyledText = styled(Typography).attrs({
-  variant: "body1"
 })`
-  color: #bcaaa4;
+  font-size: 14px;
+  font-weight: bold;
+  color: #232323;
 `
 
 export default MenuText;

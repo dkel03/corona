@@ -10,16 +10,18 @@ import "../diagnose.css"
 import AnswerTitle from "../Components/AnswerTitle";
 import QuestionText from "../Components/QuestionText";
 import HospitalButton from "../Components/HospitalButton";
+import FreeCheckUp from "../Components/FreeCheckUp";
 
 const Two = (props) => {
   const { setCardIndex } = props;
   return (
     <div className="cardDiv">
       <div className="contentDiv">
-        <div className="questionTitleDivAnswer">
+        <div className="questionTitleDiv">
           <AnswerTitle title="의사환자" />
         </div>
-        <div className="questionTextDivAnswer">
+        <div className="questionTextDiv">
+          <FreeCheckUp type="free" />
           <QuestionText text="현재 의사환자 입니다." />
           <QuestionText text="마스크를 꼭 착용하신 후," />
           <br />
@@ -28,7 +30,7 @@ const Two = (props) => {
         </div>
         <div className="buttonDivAnswer">
           <HospitalButton />
-          <Button size="medium" color="secondary" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
+          <Button size="medium" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
         </div>
       </div>
     </div>

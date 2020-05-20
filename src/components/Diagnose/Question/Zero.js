@@ -22,8 +22,8 @@ const Zero = (props) => {
           <QuestionText text="접촉자이고, 자가격리 통보를 받으셨나요?" />
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(1)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(4)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(1)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(4)}>No</Button>
         </div>
       </div>
     </div>

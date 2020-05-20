@@ -20,8 +20,8 @@ const Four = (props) => {
           <QuestionText text="확진자와 동선이 겹치셨나요?" />
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(5)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(8)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(5)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(8)}>No</Button>
         </div>
       </div>
     </div>

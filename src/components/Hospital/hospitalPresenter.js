@@ -27,9 +27,9 @@ const HospitalPresenter = (props) => {
           <input className="searchHospitalInput" placeholder="검색어를 입력하세요..." {...name} />
         </div>
         <div className="explainDiv">
-          <Typography variant="body1">시군구, 전화번호를 통합하여 검색합니다.</Typography>
+          <Typography variant="body2">시군구, 전화번호를 통합하여 검색합니다.</Typography>
           <br />
-          <Typography variant="body1">ex)'용인시' or '강남구' or '02'(지역번호)</Typography>
+          <Typography variant="body2">ex)'용인시' or '강남구' or '02'(지역번호)</Typography>
         </div>
         <div className="bogunsoDiv">
           <FormControlLabel
@@ -38,7 +38,7 @@ const HospitalPresenter = (props) => {
             }
             label="보건소를 제외할까요?"
           />
-          <Typography variant="body1"><span className="impact">(보건소는 유료검사가 불가능합니다.)</span></Typography>
+          <Typography variant="body2">(보건소는 유료검사가 불가능합니다.)</Typography>
         </div>
       </div>
       {loading ? (

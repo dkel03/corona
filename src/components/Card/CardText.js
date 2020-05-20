@@ -7,7 +7,7 @@ const CardText = (props) => { // 기본적으로 span임 !!
 }
 
 const StyledText = styled(Typography).attrs({
-  variant: "body1"
+  variant: "body2"
 })`
   display: inline;
 `

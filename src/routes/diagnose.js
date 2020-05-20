@@ -1,15 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import styled from "styled-components";
 
 // Styles
 import "../Components/Diagnose/diagnose.css";
-import AssignmentIcon from '@material-ui/icons/Assignment';
 
 // Page 관련
 import "../Components/Page/page.css";
-import PageTitle from "../Components/Page/PageTitle";
-import PageSubtitle from "../Components/Page/PageSubtitle";
+import PageTitleComponent from "../Components/Page/PageTitleComponent";
 
 // Question 관련
 import Zero from "../Components/Diagnose/Question/Zero";
@@ -33,17 +30,7 @@ function Diagnose() {
   const [cardIndex, setCardIndex] = useState(0);
   return (
     <div className="container">
-      {((cardIndex === 0)) ?
-        (<div className="searchTitleDiv">
-          <div className="searchTitleDivIcon">
-            <StyledAssignmentIcon />
-          </div>
-          <div className="searchTitleDivTitle">
-            <PageTitle title="자가진단 해보기"></PageTitle>
-            <PageSubtitle subtitle="지금 나는 어떻게 대처해야 할까?"></PageSubtitle>
-          </div>
-        </div>):(<></>)
-      }
+      {(cardIndex === 0) ? <PageTitleComponent title="자가진단 해보기" subtitle="나는 무료검사가 가능할까?" page="diagnose" />:<></>}
       <div className="questionCard">
         {cardIndex === 0 ? 
           (<Zero setCardIndex={setCardIndex}/>) : 
@@ -96,11 +83,5 @@ function Diagnose() {
     </div>
   );
 }
-
-const StyledAssignmentIcon = styled(AssignmentIcon)`
-  width: 50px;
-  height: 50px;
-  color: #bcaaa4;
-`
 
 export default Diagnose;

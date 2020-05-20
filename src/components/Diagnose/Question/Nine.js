@@ -20,8 +20,8 @@ const Four = (props) => {
           <QuestionText text="해당 접촉자분께서 증상이 있으셨나요?" />
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(10)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(11)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(10)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(11)}>No</Button>
         </div>
       </div>
     </div>

@@ -2,11 +2,10 @@
   margin: 10px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
   0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 3px;
   padding: 10px;
   padding-bottom: 5px;
-  background-color: #bcaaa4;
-  border-radius: 8px;
-  color: white;
+  background-color: white;
 }
 
 .itemDiv {
@@ -14,10 +13,8 @@
   margin: 8px;
   padding: 10px;
   min-width: 200px;
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 6px;
-  color: #8c7b75;
+  border-bottom: 2px solid #625b5b;
+  color: #232323;
 }
 
 .sigunguDiv {
@@ -30,6 +27,7 @@
   flex-direction: row;
   justify-content: flex-end;
   margin: 5px;
+  margin-top: 10px;
   margin-right: 10px;
 }
 .white {
@@ -41,7 +39,7 @@
 
 .dialogDiv {
   width: 100%;
-  color: #8c7b75;
+  color: #232323;
   display: flex;
   justify-content: space-between;
 }

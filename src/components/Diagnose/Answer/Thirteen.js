@@ -11,16 +11,18 @@ import AnswerTitle from "../Components/AnswerTitle";
 import Quarterbr from "../Components/Quarterbr";
 import QuestionText from "../Components/QuestionText";
 import HospitalButton from "../Components/HospitalButton";
+import FreeCheckUp from "../Components/FreeCheckUp";
 
 const Twelve = (props) => {
   const { setCardIndex } = props;
   return (
     <div className="cardDiv">
       <div className="contentDiv">
-        <div className="questionTitleDivAnswer">
+        <div className="questionTitleDiv">
           <AnswerTitle title="모니터링 대상" />
         </div>
-        <div className="questionTextDivAnswer">
+        <div className="questionTextDiv">
+          <FreeCheckUp type="notfree" />
           <QuestionText text="현재 접촉자의 접촉자 입니다." />
           <QuestionText text="접촉자분께서 무증상 감염자일 수 있지만," />
           <Quarterbr />
@@ -35,7 +37,7 @@ const Twelve = (props) => {
         </div>
         <div className="buttonDivAnswer">
           <HospitalButton />
-          <Button size="medium" color="secondary" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
+          <Button size="medium" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
         </div>
       </div>
     </div>

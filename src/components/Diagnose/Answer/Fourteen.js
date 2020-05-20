@@ -10,17 +10,19 @@ import "../diagnose.css"
 import AnswerTitle from "../Components/AnswerTitle";
 import QuestionText from "../Components/QuestionText";
 import SafeHospitalButton from "../Components/SafeHospitalButton";
+import FreeCheckUp from "../Components/FreeCheckUp";
 
 const Twelve = (props) => {
   const { setCardIndex } = props;
   return (
     <div className="cardDiv">
       <div className="contentDiv">
-        <div className="questionTitleDivAnswer">
+        <div className="questionTitleDiv">
           <AnswerTitle title="비접촉자" />
         </div>
-        <div className="questionTextDivAnswer">
-          <QuestionText text="직접적인 감염 가능성은 없습니다." />
+        <div className="questionTextDiv">
+          <FreeCheckUp type="notfree" />
+          <QuestionText text="검사를 받으실 필요까진 없습니다." />
           <br />
           <QuestionText text="하지만 코로나의 위험은 언제나 있기 때문에" />
           <QuestionText text="코로나 관련 생활수칙 잘 지켜주시고," />
@@ -34,7 +36,7 @@ const Twelve = (props) => {
         </div>
         <div className="buttonDivAnswer">
           <SafeHospitalButton />
-          <Button size="medium" color="secondary" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
+          <Button size="medium" variant="outlined" onClick={() => setCardIndex(0)}>다시 진단하기</Button>
         </div>
       </div>
     </div>

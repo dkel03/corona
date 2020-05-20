@@ -9,7 +9,7 @@ import Quarterbr from "../Card/Quarterbr";
 const SeventhCard = () => {
   return (
     <div className="brownCard">
-      <div className="brownCardTextBox">
+      <div className="brownCardTextDiv">
         <Quarterbr />
         <CardText text="접촉자로 분류 "/><CardImpact text="된다면" /><br />
         <div className="whiteCard">

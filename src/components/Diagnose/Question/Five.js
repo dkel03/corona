@@ -20,8 +20,8 @@ const Five = (props) => {
           <QuestionText text="관할 보건소, 지자체 등에서 연락이 왔나요?" />
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(1)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(7)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(1)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(7)}>No</Button>
         </div>
       </div>
     </div>

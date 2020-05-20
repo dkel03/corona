@@ -24,8 +24,8 @@ const Eight = (props) => {
           </div>
         </div>
         <div className="buttonDiv">
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(9)}>Yes</Button>
-          <Button size="small" color="secondary" variant="contained" onClick={() => setCardIndex(14)}>No</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(9)}>Yes</Button>
+          <Button size="small" variant="outlined" onClick={() => setCardIndex(14)}>No</Button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const CoronaMap = () => {
     <div className="cardDiv">
       <div className="contentDiv">
         <Button color="primary">
-          <a rel="noopener noreferrer" href="https://coronamap.site" target="_blank"><CoronaMapTitle title="코로나맵으로 확진자 동선확인하기!" /></a>
+          <a style={{color: "#232323"}} rel="noopener noreferrer" href="https://coronamap.site" target="_blank"><CoronaMapTitle title="코로나맵으로 확진자 동선확인하기!" /></a>
         </Button>
       </div>
     </div>

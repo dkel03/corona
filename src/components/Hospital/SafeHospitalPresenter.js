@@ -20,16 +20,19 @@ const SafeHospitalPresenter = (props) => {
             <input className="searchHospitalInput" placeholder="검색어를 입력하세요..." {...name} />
           </div>
           <div className="explainDiv">
-            <Typography variant="body1">시군구, 전화번호를 통합하여 검색합니다.</Typography>
+            <Typography variant="body2">시군구, 전화번호를 통합하여 검색합니다.</Typography>
             <br />
-            <Typography variant="body1">ex)'용인시' or '강남구' or '02'(지역번호)</Typography>
+            <Typography variant="body2">ex)'용인시' or '강남구' or '02'(지역번호)</Typography>
           </div>
           <div className="safeHospitalDiv">
-            <Typography variant="h6" > Q. 안심병원이란?</Typography>
-            <br />
-            <Typography variant="body2">- 국가에서 선정한 <span className="impact">"코로나 걱정없는 병원"</span></Typography>
-            <br />
-            <Typography variant="body2">- 진료가 필요할 땐 꼭 <span className="impact">안심병원</span>을 찾으세요!</Typography>
+            <div className="safeHospitalTitle">
+              <Typography variant="body1" > Q. 안심병원이란?</Typography>
+            </div>
+            <div className="safeHospitalText">
+              <Typography variant="body2">국가에서 선정한 <span className="impact">"코로나 걱정없는 병원"</span></Typography>
+              <br />
+              <Typography variant="body2">진료가 필요할 땐 꼭 <span className="impact">안심병원</span>을 찾으세요!</Typography>
+            </div>
           </div>
         </div>
       {loading ? (

@@ -12,7 +12,7 @@ import Quarterbr from "../Card/Quarterbr";
 const FourthCard = () => {
   return (
     <div className="brownCard">
-      <div className="brownCardTextBox">
+      <div className="brownCardTextDiv">
         <Quarterbr />
         <CardText text="우선 " /><CardImpact text="정부" /><CardText text="는 크게 4가지의 분류를 하고 있어요." /><br />
         <Quarterbr />

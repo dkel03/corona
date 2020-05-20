@@ -7,11 +7,12 @@ const PageSubtitle = (props) => {
 }
 
 const StyledSubTitle = styled(Typography).attrs({
-  varient: "subtitle",
-  color: "primary"
 })`
+  font-size: 17px;
+  font-weight: medium;
   padding: 10px;
   margin-top: -20px;
   margin-left: 2px;
+  color: black;
 `
 export default PageSubtitle;

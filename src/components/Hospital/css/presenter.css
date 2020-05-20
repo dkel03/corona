@@ -4,13 +4,11 @@
   align-items: center;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
   0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 3px;
   margin-top: 10px;
   padding: 5px;
-  border-radius: 30px;
-  background-color: white;
-  border: 4px solid #bcaaa4;
-  color:#8c7b75;
-  min-width: 290px;
+  color:black;
+  width: 95%;
 }
 
 .loadingDiv {
@@ -22,8 +20,8 @@
 }
 
 .hospitalListDiv {
-  margin: 20px;
-  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -36,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
@@ -45,10 +43,9 @@
 .searchHospitalInput {
   width: 90%;
   padding: 10px;
-  font-size: 20px;
-  border-radius: 8px;
+  font-size: 18px;
   -webkit-appearance: none;
-  border: 2px solid #8c7b75;
+  border: 2px solid #625b5b;
 }
 *:focus {
   outline: none;
@@ -61,7 +58,7 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  margin-top: 7px;
+  margin-top: 15px;
   line-height: 5px;
 }
 
@@ -70,30 +67,46 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  background-color: #bcaaa4;
-  border-radius: 20px;
-  padding: 7px;
-  width: 90%;
+  background-color: #9e9e9e;
+  border-radius: 8px;
+  padding: 8px;
+  padding-top: 2px;
   margin: 5px;
   margin-bottom: 20px;
+  width: 230px;
   color: white;
+}
+
+@media (min-width: 784px) {
+  .bogunsoDiv {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .safeHospitalDiv {
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-  0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   margin: 3px;
   margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 20px;
+  margin-top: 15px;
+  padding: 5px;
+  padding-top: 5px;
+  border-radius: 8px;
   line-height: 5px;
-  background-color: #bcaaa4;
-  color: white;
+  background-color: white;
+  border: 2px solid #625b5b;
 }
 
-.impact {
-  font-size: 17px;
-  color: #616161;
+.safeHospitalTitle {
+  background-color: #9e9e9e;
+  border-radius: 8px;
+  color: white;
+  padding: 6px;
+  margin-top:-23px;
+  margin-left: 6px;
+  width: 130px;
+}
+.safeHospitalText {
+  padding: 8px;
+  margin: 3px;
 }
